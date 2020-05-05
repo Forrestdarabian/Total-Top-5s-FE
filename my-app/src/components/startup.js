@@ -10,7 +10,7 @@ function Startup() {
         <div>
           <br />
           <p>
-            Hello! <br /> Come take a look at some of my favorite things!
+            Hello! <br /> Welcome to Total Top 5's!
           </p>
           <a href="./home">Let's go!</a>
         </div>

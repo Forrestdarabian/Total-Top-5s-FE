@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: blueviolet;
 }
 
 .App-logo {
@@ -78,6 +79,11 @@ button.accordion.is-open {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-in-out;
+}
+
+h1.top-h1 {
+  color: yellow;
+  text-decoration: underline;
 }
 
 @keyframes App-logo-spin {

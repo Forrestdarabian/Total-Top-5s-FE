@@ -7,6 +7,7 @@ import "../App.css";
 function Games() {
   return (
     <div className="home-container">
+      <h1 className="top-h1">Total Top 5's</h1>
       <div className="nav-container">
         <NavLink to="/movies">
           <button className="movies">Movies</button>
@@ -34,8 +35,12 @@ function Games() {
         <header className="Home-header">
           <div>
             <br />
-            <h1>My Top 10 Video Games of All Time</h1>
-            <br /> <h3>Interested in Making Your Own Top 10's? Hang Tight!</h3>
+            <h1>Video Game Top 5's!</h1>
+            <br />{" "}
+            <h3>
+              Interested in Making Your Own Top 5's? Click{" "}
+              <a href="./create">Here!</a>
+            </h3>
           </div>
           <br />
           <br />
@@ -45,24 +50,23 @@ function Games() {
         <br />
         <br />
         <br />
+        <h1>Choose a Video Game Decade Below!</h1>
 
         <Accordion
-          title="90's"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        />
-        <Accordion
           title="2000's"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        />
-        <Accordion
-          title="2010's"
           content="
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        "
+          <h3>5. Dead By Daylight</h3>
+          <p>Recommended DLC's: The Halloween Chapter, The Saw Chapter</p>
+          <h3>4. Batman Arkham Series</h3>
+          <p>Recommended Games: Batman Arkham Asylum, Batman Arkham City</p>
+          <h3>3. The Sims Series</h3>
+          <p>Recommended Games: The Sims 4, The Sims 1</p>
+          <h3>2. Bioshock Series</h3>
+          <p>Recommended Games: Bioshock Infinite, Bioshock 1</p>
+          <h3>1. Kingdom Hearts Series</h3>
+          <p>Recommended Games: Kingdom Hearts 1, Kingdom Hearts 2</p>
+
+          "
         />
       </div>
     </div>

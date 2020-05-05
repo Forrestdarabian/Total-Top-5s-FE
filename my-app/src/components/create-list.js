@@ -1,10 +1,10 @@
 import React from "react";
-import logo from "../icons/alien.svg";
+import logo from "../icons/hammer.svg";
 import Accordion from "../functionality/accordion";
 import { NavLink } from "react-router-dom";
 import "../App.css";
 
-function Home() {
+function Create() {
   return (
     <div className="home-container">
       <h1 className="top-h1">Total Top 5's</h1>
@@ -35,33 +35,29 @@ function Home() {
         <header className="Home-header">
           <div>
             <br />
-            <h1>Welcome to the Home Page!</h1>
-            <br /> <h3>Click a Category Above or Scroll Down for More Info!</h3>
+            <h1>Create a Top 5</h1>
+            <br />{" "}
+            <h3>
+              Unfortunately, Creating a List Isn't Available Yet, But Check Back
+              Soon!
+              <br /> Thank You for Your Interest!
+            </h3>
           </div>
           <br />
           <br />
           <br />
           <img src={logo} className="App-logo" alt="logo" />
-          <br />
-          <br />
-          <br />
-          <h1>So What's This App All About?</h1>
-          <br />
-          <h3>
-            Have You Ever Wondered What The Best Movies, Artists, Games, or T.V.
-            Shows Were? <br /> Well You've Come to the Right Place!
-          </h3>
-          <Accordion
-            title="Meet The Creator"
-            content="
-          <h3>Forrest Darabian</h3>
-          <p>Is a Full-Stack Web Developer from Thousand Oaks, California. He enjoys Music, Art, and Coding awesome sites like this!</p>
-    "
-          />
         </header>
+        <br />
+        <br />
+        <br />
+        <h1>Back To The Home Page?</h1>
+        <NavLink to="/home">
+          <button className="home">Let's Go!</button>
+        </NavLink>
       </div>
     </div>
   );
 }
 
-export default Home;
+export default Create;
