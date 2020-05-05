@@ -7,6 +7,7 @@ import "../App.css";
 function Music() {
   return (
     <div className="home-container">
+      <h1 className="top-h1">Total Top 5's</h1>
       <div className="nav-container">
         <NavLink to="/movies">
           <button className="movies">Movies</button>
@@ -34,8 +35,12 @@ function Music() {
         <header className="Home-header">
           <div>
             <br />
-            <h1>My Top 10 Artists of All Time!</h1>
-            <br /> <h3>Interested in Making Your Own Top 10's? Hang Tight!</h3>
+            <h1>Music Artist Top 5's!</h1>
+            <br />{" "}
+            <h3>
+              Interested in Making Your Own Top 5's? Click{" "}
+              <a href="./create">Here!</a>
+            </h3>
           </div>
           <br />
           <br />
@@ -45,14 +50,55 @@ function Music() {
         <br />
         <br />
         <br />
+        <h1>Choose a Decade Below!</h1>
 
         <Accordion
-          title="Alternative Rock"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          title="1980's - 1990's"
+          content="
+          <h3>5. Mr. Bungle</h3>
+          <p>Best Albums: California, Mr. Bungle</p>
+          <h3>4. Iron Maiden</h3>
+          <p>Best Albums: Brave New World, Seventh Son of a Seventh Son</p>
+          <h3>3. Nirvana</h3>
+          <p>Best Albums: In Utero, Nevermind </p>
+          <h3>2. Nine Inch Nails</h3>
+          <p>Best Albums: The Downward Spiral, Broken</p>
+          <h3>1. Pink Floyd</h3>
+          <p>Best Albums: Animals, The Wall </p>
+
+          "
         />
         <Accordion
-          title="Metal"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          title="2000's"
+          content="
+          <h3>5. Eminem</h3>
+          <p>Best Albums: Relapse, Recovery </p>
+          <h3>4. Avenged Sevenfold</h3>
+          <p>Best Albums: Nightmare, Avenged Sevenfold </p>
+          <h3>3. Blink-182</h3>
+          <p>Best Albums: Enema Of The State, Take Off Your Pants And Jacket </p>
+          <h3>2. Brand New</h3>
+          <p>Best Albums: The Devil and God Are Raging Inside Me, Deja Entendu </p>
+          <h3>1. Slipknot</h3>
+          <p>Best Albums: Slipknot, We Are Not Your Kind </p>
+
+          "
+        />
+        <Accordion
+          title="2010's"
+          content="
+          <h3>5. AWOLNATION</h3>
+          <p>Best Albums: Megalithic Symphony, Run </p>
+          <h3>The Neighbourhood</h3>
+          <p>Best Albums: Wiped Out!, The Neighbourhood </p>
+          <h3>3. The 1975</h3>
+          <p>Best Albums: The 1975, I Like it When You Sleep, for You Are So Beautiful yet So Unaware of It </p>
+          <h3>2. Cage The Elephant</h3>
+          <p>Best Albums: Thank You, Happy Birthday</p>
+          <h3>1. Arctic Monkeys</h3>
+          <p>Best Albums: Humbug, Favourite Worst Nightmare </p>
+
+          "
         />
       </div>
     </div>

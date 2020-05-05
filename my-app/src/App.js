@@ -7,6 +7,7 @@ import Movies from "./components/movies";
 import Music from "./components/music";
 import Tv from "./components/tv";
 import Games from "./components/games";
+import Create from "./components/create-list";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/music" component={Music} />
         <Route path="/tv" component={Tv} />
         <Route path="/games" component={Games} />
+        <Route path="/create" component={Create} />
       </Switch>
     </div>
   );
