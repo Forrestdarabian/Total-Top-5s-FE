@@ -15,7 +15,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: blueviolet;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -84,6 +84,10 @@ button.accordion.is-open {
 h1.top-h1 {
   color: yellow;
   text-decoration: underline;
+}
+
+footer {
+  background-color: yellow;
 }
 
 @keyframes App-logo-spin {
