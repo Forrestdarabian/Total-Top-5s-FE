@@ -3,8 +3,12 @@ import logo from "../icons/alien.svg";
 import Accordion from "../functionality/accordion";
 import { NavLink } from "react-router-dom";
 import "../App.css";
+import { connect } from "react-redux";
 
-function Home() {
+import { logOut } from "../store/actions/actions";
+
+function Home(props) {
+  const { touched, errors, logInUser, history, token } = props;
   return (
     <div className="home-container">
       <h1 className="top-h1">Total Top 5's</h1>
@@ -38,6 +42,28 @@ function Home() {
             <h1>Welcome to the Home Page!</h1>
             <br /> <h3>Click a Category Above or Scroll Down for More Info!</h3>
           </div>
+          {token ? (
+            <button
+              className="home"
+              onClick={() => {
+                props.logOut();
+                props.history.push(`/login/`);
+              }}
+            >
+              Logout
+            </button>
+          ) : (
+            <>
+              {" "}
+              <h1>Create An Account or Login Here!</h1>
+              <NavLink to="/register">
+                <button className="home">Create An Account</button>
+              </NavLink>
+              <NavLink to="/login">
+                <button className="home">Login</button>
+              </NavLink>
+            </>
+          )}
           <br />
           <br />
           <br />
@@ -107,4 +133,10 @@ function Home() {
   );
 }
 
-export default Home;
+const mapStateToProps = (state) => {
+  console.log(`THIS IS MSTP STATE IN LOGIN`, state);
+  return {
+    token: state.token,
+  };
+};
+export default connect(mapStateToProps, { logOut: logOut })(Home);
