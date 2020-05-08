@@ -8,6 +8,9 @@ import Music from "./components/music";
 import Tv from "./components/tv";
 import Games from "./components/games";
 import Create from "./components/create-list";
+import Register from "./components/register";
+import Login from "./components/login";
+import PrivateRoute from "./utils/authRouter";
 
 function App() {
   return (
@@ -21,6 +24,8 @@ function App() {
         <Route path="/tv" component={Tv} />
         <Route path="/games" component={Games} />
         <Route path="/create" component={Create} />
+        <Route exact path="/register" component={Register} />
+        <Route exact path="/login" component={Login} />
       </Switch>
     </div>
   );
