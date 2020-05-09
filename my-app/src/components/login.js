@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Button, Label } from "reactstrap";
+import logo from "../icons/space.svg";
+import { NavLink } from "react-router-dom";
+
 import { Form, Field, withFormik } from "formik";
 import * as Yup from "yup";
 // import axios from "axios";
@@ -17,7 +20,7 @@ const UserLogin = ({ touched, errors, logInUser, history, token }) => {
 
   useEffect(() => {
     if (token) {
-      history.push("/home");
+      history.push("/create");
     }
   }, [history, token]);
 
@@ -34,36 +37,106 @@ const UserLogin = ({ touched, errors, logInUser, history, token }) => {
   };
 
   return (
-    <Form className="login-form" onChange={handleChange}>
-      <h2>Log In</h2>
-      <Label for="username">Username</Label>
-      <Field
-        type="text"
-        name="username"
-        placeholder="Enter your Username"
-        autoComplete="username"
-      ></Field>
-      {touched.username && errors.username && (
-        <p className="error">{errors.username}</p>
-      )}
-      <Label for="password">Password</Label>
-      <Field
-        type="password"
-        name="password"
-        placeholder="Enter your Password"
-        autoComplete="current-password"
-      ></Field>
-      {touched.password && errors.password && (
-        <p className="error">{errors.password}</p>
-      )}
-      <Button className="submit" type="submit" onClick={(e) => handleSubmit(e)}>
-        Submit
-      </Button>
-      <img
-      // src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-      // alt="IMG"
-      ></img>
-    </Form>
+    <div className="sign-up-container">
+      <h1 className="top-h1">Total Top 5's</h1>
+      <Form className="login-form" onChange={handleChange}>
+        <h1>Login</h1>
+        <h3>
+          Don't Have An Account? Click
+          <a href="./register"> Here!</a> To Register!
+        </h3>
+        <Label for="username">Username: </Label>
+        <Field
+          type="text"
+          name="username"
+          placeholder="Enter your Username"
+          autoComplete="username"
+        ></Field>
+        {touched.username && errors.username && (
+          <p className="error">{errors.username}</p>
+        )}{" "}
+        <br /> <br />
+        <Label for="password">Password: </Label>
+        <Field
+          type="password"
+          name="password"
+          placeholder="Enter your Password"
+          autoComplete="current-password"
+        ></Field>
+        {touched.password && errors.password && (
+          <p className="error">{errors.password}</p>
+        )}
+        <br /> <br />
+        <Button
+          className="submit"
+          type="submit"
+          onClick={(e) => handleSubmit(e)}
+        >
+          Sign In
+        </Button>
+        <br />
+        <br />
+      </Form>
+      <br />
+      <div className="second-nav-container">
+        <NavLink to="/home">
+          <button className="home">Home</button>
+        </NavLink>
+      </div>
+      <br />
+      <br />
+      <br />
+      <img src={logo} className="App-logo" alt="logo" />
+      <br />
+      <br />
+      <br />
+      <br />
+      <footer class="footer pt-80 pt-xs-60">
+        <div class="footer-container">
+          <h1>Total Top 5's</h1>
+          <div class="copyright">
+            <p>
+              © 2020
+              <a>
+                <b> Forrest Darabian </b>
+              </a>
+              All Rights Reserved.
+            </p>
+          </div>
+          <div>
+            Icons made by{" "}
+            <a
+              href="https://www.flaticon.com/authors/smalllikeart"
+              title="smalllikeart"
+            >
+              smalllikeart
+            </a>{" "}
+            from{" "}
+            <a href="https://www.flaticon.com/" title="Flaticon">
+              www.flaticon.com
+            </a>
+          </div>
+          <div class="left">
+            <h4 class="something">Contact / Links</h4>
+            <li>
+              {" "}
+              <a href="mailto:forrestdarabian@gmail.com">
+                <i class="ion-ios-email fa-icons"></i>
+                Contact Me
+              </a>{" "}
+            </li>
+            <li>
+              <a href="https://www.forrestdarabian.com/">
+                <i class="fa-angle-double-right"></i>Developers Site
+              </a>
+            </li>
+          </div>
+        </div>
+      </footer>{" "}
+      <br />
+      <br />
+      <br />
+    </div>
   );
 };
 
