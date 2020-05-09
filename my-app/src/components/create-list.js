@@ -1,11 +1,9 @@
 import React from "react";
-import logo from "../icons/hammer.svg";
-import Accordion from "../functionality/accordion";
 import { NavLink } from "react-router-dom";
-import "../App.css";
 import { connect } from "react-redux";
-
 import { logOut } from "../store/actions/actions";
+import logo from "../icons/hammer.svg";
+import "../App.css";
 
 const Create = (props) => {
   const { touched, errors, logInUser, history, token } = props;
@@ -22,8 +20,8 @@ const Create = (props) => {
           <h3>Users Will Be Able To See Your Top 5's</h3>
           <div className="form-group">
             <label>Pick a Category: </label>
-            <select id="category" name="category">
-              <option value="Movies">Movies</option>
+            <select className="form-control" id="category" name="category">
+              <option value="Movies"> Movies</option>
               {/* <option value="Music">Music</option>
               <option value="T.V. Shows">T.V. Shows</option>
               <option value="Video Games">Video Games</option> */}
@@ -32,10 +30,12 @@ const Create = (props) => {
           <br />
           <div className="form-group">
             <label>Pick a Genre / Decade: </label>
-            <select id="genre" name="genre">
-              <option value="Movies">Action</option>
-              <option value="Movies">Drama</option>
-              <option value="Movies">Horror</option>
+            <select className="form-control" id="genre" name="genre">
+              <option className="form-control" value="Movies">
+                Action
+              </option>
+              <option value="Movies"> Drama</option>
+              <option value="Movies"> Horror</option>
               {/* <option value="Music">1980's - 1990's</option>
               <option value="Music">2000's</option>
               <option value="Music">2010's</option>
@@ -50,7 +50,7 @@ const Create = (props) => {
             <input
               type="text"
               className="form-control"
-              placeholder="Movie Name"
+              placeholder=" Movie Name"
             />
           </div>
           <br />
@@ -59,7 +59,7 @@ const Create = (props) => {
             <input
               type="text"
               className="form-control"
-              placeholder="Movie Description"
+              placeholder=" Movie Description"
             />
           </div>
           <br />
@@ -68,7 +68,7 @@ const Create = (props) => {
             <input
               type="text"
               className="form-control"
-              placeholder="Movie Name"
+              placeholder=" Movie Name"
             />
           </div>
           <br />
@@ -77,7 +77,7 @@ const Create = (props) => {
             <input
               type="text"
               className="form-control"
-              placeholder="Movie Description"
+              placeholder=" Movie Description"
             />
           </div>
           <br />
@@ -86,7 +86,7 @@ const Create = (props) => {
             <input
               type="text"
               className="form-control"
-              placeholder="Movie Name"
+              placeholder=" Movie Name"
             />
           </div>
           <br />
@@ -95,7 +95,7 @@ const Create = (props) => {
             <input
               type="text"
               className="form-control"
-              placeholder="Movie Description"
+              placeholder=" Movie Description"
             />
           </div>
           <br />
@@ -104,7 +104,7 @@ const Create = (props) => {
             <input
               type="text"
               className="form-control"
-              placeholder="Movie Name"
+              placeholder=" Movie Name"
             />
           </div>
           <br />
@@ -113,7 +113,7 @@ const Create = (props) => {
             <input
               type="text"
               className="form-control"
-              placeholder="Movie Description"
+              placeholder=" Movie Description"
             />
           </div>
           <br />
@@ -122,7 +122,7 @@ const Create = (props) => {
             <input
               type="text"
               className="form-control"
-              placeholder="Movie Name"
+              placeholder=" Movie Name"
             />
           </div>
           <br />
@@ -131,7 +131,7 @@ const Create = (props) => {
             <input
               type="text"
               className="form-control"
-              placeholder="Movie Description"
+              placeholder=" Movie Description"
             />
           </div>
           <br />

@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Eater&family=Londrina+Shadow&family=Orbitron&family=Peralta&family=Press+Start+2P&family=Unkempt&display=swap");
 .App {
   text-align: center;
   background-color: blueviolet;
+  font-family: "Unkempt", cursive;
 }
 
 .App-logo {
@@ -58,14 +60,17 @@ button {
   background: #03ea5c;
   align-self: center;
   margin: 5px;
-  /* width: 30%; */
   padding: 0.5rem 2rem;
-  border: none;
   color: white;
   font-size: 1.2rem;
-  border-radius: 2px;
   box-shadow: 1px 1px 5px #000;
-  /* float: left; */
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+button:hover,
+button.is-open {
+  background-color: black;
 }
 
 .container {
@@ -82,7 +87,7 @@ button.accordion {
   text-align: left;
   padding: 15px 20px;
   font-size: 18px;
-  color: #444;
+  color: black;
   cursor: pointer;
   transition: background-color 0.2s linear;
 }
@@ -119,8 +124,8 @@ form {
 
 .accordion-content {
   background-color: white;
-  border-left: 1px solid whitesmoke;
-  border-right: 1px solid whitesmoke;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
   padding: 0 20px;
   max-height: 0;
   overflow: hidden;
@@ -131,6 +136,39 @@ h1.top-h1 {
   color: black(0, 0, 0);
   text-decoration: underline;
   margin-top: 0px;
+}
+
+.nav-container {
+  background: linear-gradient(rgb(230, 11, 175), yellow);
+  margin-left: 125px;
+  margin-right: 125px;
+  border-style: solid;
+}
+@media (max-width: 590px) {
+  .nav-container {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-style: solid;
+  }
+}
+
+/* .second-nav-container {
+  background: linear-gradient(rgb(230, 11, 175), yellow);
+  margin-left: 125px;
+  margin-right: 125px;
+  border-style: solid;
+}
+@media (max-width: 590px) {
+  .second-nav-container {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-style: solid;
+  }
+} */
+
+.form-control {
+  border: 2px solid black;
+  border-radius: 4px;
 }
 
 footer {

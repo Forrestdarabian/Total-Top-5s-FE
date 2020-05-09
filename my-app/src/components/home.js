@@ -1,11 +1,10 @@
 import React from "react";
-import logo from "../icons/alien.svg";
-import Accordion from "../functionality/accordion";
 import { NavLink } from "react-router-dom";
-import "../App.css";
 import { connect } from "react-redux";
-
 import { logOut } from "../store/actions/actions";
+import Accordion from "../functionality/accordion";
+import logo from "../icons/alien.svg";
+import "../App.css";
 
 function Home(props) {
   const { touched, errors, logInUser, history, token } = props;
@@ -40,7 +39,6 @@ function Home(props) {
           <h1>Welcome to the Home Page!</h1>
           <h3>
             &uarr; Click a Category Above To See Examples of Some Top 5's!
-            &uarr;
           </h3>
           {token ? (
             <button

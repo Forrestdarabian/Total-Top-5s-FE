@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "../icons/musician.svg";
-import Accordion from "../functionality/accordion";
 import { NavLink } from "react-router-dom";
+import Accordion from "../functionality/accordion";
+import logo from "../icons/musician.svg";
 import "../App.css";
 
 function Music() {
