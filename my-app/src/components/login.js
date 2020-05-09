@@ -43,7 +43,7 @@ const UserLogin = ({ touched, errors, logInUser, history, token }) => {
         <h1>Login</h1>
         <h3>
           Don't Have An Account? Click
-          <a href="./register"> Here!</a> To Register!
+          <a href="./register"> Here</a> To Register!
         </h3>
         <Label for="username">Username: </Label>
         <Field
