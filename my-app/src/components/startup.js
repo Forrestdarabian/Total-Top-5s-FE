@@ -6,6 +6,8 @@ function Startup() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1 className="top-h1">Total Top 5's</h1>
+        <br />
         <img src={logo} className="App-logo" alt="logo" />
         <div>
           <br />

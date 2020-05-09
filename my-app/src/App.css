@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
@@ -45,6 +45,13 @@
   border-style: solid;
   padding-bottom: 50px;
   padding-top: 25px;
+}
+@media (max-width: 590px) {
+  .text-section {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-style: solid;
+  }
 }
 
 button {
@@ -89,11 +96,25 @@ button.accordion.is-open {
   background-color: #ddd;
 }
 
+p.about {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 form {
   background: linear-gradient(rgb(230, 11, 175), yellow);
   margin-left: 125px;
   margin-right: 125px;
   border-style: solid;
+}
+
+@media (max-width: 590px) {
+  form {
+    background: linear-gradient(rgb(230, 11, 175), yellow);
+    margin-left: 10px;
+    margin-right: 10px;
+    border-style: solid;
+  }
 }
 
 .accordion-content {
@@ -109,21 +130,23 @@ form {
 h1.top-h1 {
   color: black(0, 0, 0);
   text-decoration: underline;
+  margin-top: 0px;
 }
 
 footer {
-  background: linear-gradient(
-    to right,
-    rgb(231, 12, 107) 0%,
-    rgb(90, 157, 233) 100%,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(148, 187, 233, 1) 100%
-  );
+  background: linear-gradient(rgb(230, 11, 175), yellow);
   margin-left: 125px;
   margin-right: 125px;
   border-style: solid;
 }
 
+@media (max-width: 590px) {
+  footer {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-style: solid;
+  }
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

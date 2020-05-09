@@ -83,7 +83,7 @@ const Register = (props) => {
         <h1>Sign Up</h1>
         <h3>
           Already Have An Account? Click
-          <a href="./login"> Here!</a> To Sign In!
+          <a href="./login"> Here</a> To Sign In!
         </h3>
         <div className="form-group">
           <label>Full name: </label>
