@@ -26,44 +26,47 @@ function Home(props) {
           <button className="games">Video Games</button>
         </NavLink>
       </div>
-
       <br />
-
       <div className="second-nav-container">
         <NavLink to="/home">
           <button className="home">Home</button>
         </NavLink>
       </div>
-
       <div className="Home">
         <header className="Home-header">
-          <div>
-            <br />
+          <br />
+          <div className="text-section">
             <h1>Welcome to the Home Page!</h1>
-            <br /> <h3>Click a Category Above or Scroll Down for More Info!</h3>
+            <h3>
+              &uarr; Click a Category Above To See Examples of Some Top 5's!
+              &uarr;
+            </h3>
+            {token ? (
+              <button
+                className="home"
+                onClick={() => {
+                  props.logOut();
+                  props.history.push(`/login/`);
+                }}
+              >
+                Logout
+              </button>
+            ) : (
+              <>
+                {" "}
+                <h3>&darr; Or Signup Now to Create Your Own! &darr;</h3>
+                <NavLink to="/register">
+                  <button className="home">Create an Account</button>
+                </NavLink>
+                <NavLink to="/login">
+                  <button className="home">Login</button>
+                </NavLink>
+                <br />
+              </>
+            )}
           </div>
-          {token ? (
-            <button
-              className="home"
-              onClick={() => {
-                props.logOut();
-                props.history.push(`/login/`);
-              }}
-            >
-              Logout
-            </button>
-          ) : (
-            <>
-              {" "}
-              <h1>Create An Account or Login Here!</h1>
-              <NavLink to="/register">
-                <button className="home">Create An Account</button>
-              </NavLink>
-              <NavLink to="/login">
-                <button className="home">Login</button>
-              </NavLink>
-            </>
-          )}
+          <br />
+          <br />
           <br />
           <br />
           <br />
@@ -71,41 +74,35 @@ function Home(props) {
           <br />
           <br />
           <br />
-          <h1>So What's This App All About?</h1>
           <br />
-          <h3>
-            Have You Ever Wondered What The Best Movies, Artists, Games, or T.V.
-            Shows Were? <br /> Well You've Come to the Right Place!
-          </h3>
+          <br />
+          <div className="text-section">
+            <h1>So What's This App All About?</h1>
+            <p>
+              Have You Ever Wanted a Place Where You Can Make Your Own Top 5
+              Lists?
+              <br /> Well, We've Got You Covered! With New Categories Coming out
+              Weekly,
+              <br /> You Can Constantly Upload, Edit, and Delete Your Top 5
+              Picks for Any Category!
+            </p>
+          </div>
+          <br />{" "}
           <Accordion
             title="Meet The Creator"
             content="
           <h3>Forrest Darabian</h3>
-          <p>Is a Full-Stack Web Developer from Thousand Oaks, California. He enjoys Music, Art, and Coding awesome sites like this!</p>
+          <p>Is a Full-Stack Web Developer From Thousand Oaks, California. He Enjoys Music, Art, and Coding Awesome Sites Like This!</p>
     "
           />
+          <br />
+          <br />
         </header>
       </div>
       <footer class="footer pt-80 pt-xs-60">
-        <div class="container">
+        <div class="footer-container">
           <h1>Total Top 5's</h1>
-
-          <h4 class="mb-30">Contact / Links</h4>
-          <li>
-            {" "}
-            <a href="mailto:forrestdarabian@gmail.com">
-              <i class="ion-ios-email fa-icons"></i>
-              forrestdarabian@gmail.com
-            </a>{" "}
-          </li>
-          <li>
-            <a href="forrestdarabian.com">
-              <i class="fa fa-angle-double-right"></i>Developers Site
-            </a>
-          </li>
-        </div>{" "}
-        <div class="copyright">
-          <div class="container">
+          <div class="copyright">
             <p>
               © 2020
               <a>
@@ -114,21 +111,39 @@ function Home(props) {
               All Rights Reserved.
             </p>
           </div>
+          <div>
+            Icons made by{" "}
+            <a
+              href="https://www.flaticon.com/authors/smalllikeart"
+              title="smalllikeart"
+            >
+              smalllikeart
+            </a>{" "}
+            from{" "}
+            <a href="https://www.flaticon.com/" title="Flaticon">
+              www.flaticon.com
+            </a>
+          </div>
+          <div class="left">
+            <h4 class="something">Contact / Links</h4>
+            <li>
+              {" "}
+              <a href="mailto:forrestdarabian@gmail.com">
+                <i class="ion-ios-email fa-icons"></i>
+                Contact Me
+              </a>{" "}
+            </li>
+            <li>
+              <a href="https://www.forrestdarabian.com/">
+                <i class="fa-angle-double-right"></i>Developers Site
+              </a>
+            </li>
+          </div>
         </div>
-        <div>
-          Icons made by{" "}
-          <a
-            href="https://www.flaticon.com/authors/smalllikeart"
-            title="smalllikeart"
-          >
-            smalllikeart
-          </a>{" "}
-          from{" "}
-          <a href="https://www.flaticon.com/" title="Flaticon">
-            www.flaticon.com
-          </a>
-        </div>
-      </footer>
+      </footer>{" "}
+      <br />
+      <br />
+      <br />
     </div>
   );
 }

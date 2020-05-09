@@ -11,7 +11,7 @@ import Create from "./components/create-list";
 import Register from "./components/register";
 import Login from "./components/login";
 import PrivateRoute from "./utils/authRouter";
-
+import PostedList from "./components/posted-list";
 function App() {
   return (
     <div className="App">
@@ -24,6 +24,7 @@ function App() {
         <Route path="/tv" component={Tv} />
         <Route path="/games" component={Games} />
         <Route path="/create" component={Create} />
+        <Route path="/posted-list" component={PostedList} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
       </Switch>

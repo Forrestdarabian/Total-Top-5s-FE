@@ -1,6 +1,8 @@
 import React from "react";
-import { Form, Input, Button } from "antd";
 import { connect } from "react-redux";
+import logo from "../icons/halloween.svg";
+import { NavLink } from "react-router-dom";
+
 import axiosWithAuth from "../utils/axiosWithAuth";
 
 import { addUser } from "../store/actions/actions";
@@ -76,43 +78,109 @@ const Register = (props) => {
 
   return (
     <div className="sign-up-container">
+      <h1 className="top-h1">Total Top 5's</h1>
       <form onSubmit={(e) => handleSubmit(e)}>
-        <h3>Sign Up</h3>
-
+        <h1>Sign Up</h1>
+        <h3>
+          Already Have An Account? Click
+          <a href="./login"> Here!</a> To Sign In!
+        </h3>
         <div className="form-group">
-          <label>Full name</label>
+          <label>Full name: </label>
           <input type="text" className="form-control" placeholder="Full name" />
         </div>
-
+        <br />
         <div className="form-group">
-          <label>User name</label>
+          <label>Username: </label>
           <input type="text" className="form-control" placeholder="User name" />
         </div>
+        <br />
 
         <div className="form-group">
-          <label>Password</label>
+          <label>Password: </label>
           <input
             type="password"
             className="form-control"
             placeholder="Enter password"
           />
         </div>
+        <br />
+
         <div className="form-group">
-          <label>Email address</label>
+          <label>Email Address: </label>
           <input
             type="email"
             className="form-control"
             placeholder="Enter email"
           />
         </div>
+        <br />
+
         <button type="submit" className="btn btn-primary btn-block">
           Sign Up
         </button>
+        <br />
+        <br />
       </form>
+      <br />
+      <div className="second-nav-container">
+        <NavLink to="/home">
+          <button className="home">Home</button>
+        </NavLink>
+      </div>
+      <br />
+      <br />
+      <img src={logo} className="App-logo" alt="logo" />
+      <br />
+      <br />
+      <br />
+      <footer class="footer pt-80 pt-xs-60">
+        <div class="footer-container">
+          <h1>Total Top 5's</h1>
+          <div class="copyright">
+            <p>
+              © 2020
+              <a>
+                <b> Forrest Darabian </b>
+              </a>
+              All Rights Reserved.
+            </p>
+          </div>
+          <div>
+            Icons made by{" "}
+            <a
+              href="https://www.flaticon.com/authors/smalllikeart"
+              title="smalllikeart"
+            >
+              smalllikeart
+            </a>{" "}
+            from{" "}
+            <a href="https://www.flaticon.com/" title="Flaticon">
+              www.flaticon.com
+            </a>
+          </div>
+          <div class="left">
+            <h4 class="something">Contact / Links</h4>
+            <li>
+              {" "}
+              <a href="mailto:forrestdarabian@gmail.com">
+                <i class="ion-ios-email fa-icons"></i>
+                Contact Me
+              </a>{" "}
+            </li>
+            <li>
+              <a href="https://www.forrestdarabian.com/">
+                <i class="fa-angle-double-right"></i>Developers Site
+              </a>
+            </li>
+          </div>
+        </div>
+      </footer>{" "}
+      <br />
+      <br />
+      <br />
     </div>
   );
 };
-
-// const WrappedRegistrationForm = Form.create({ name: "register" })(Register);
 
 export default connect(null, { addUser: addUser })(Register);

@@ -1,20 +1,44 @@
 import React from "react";
-import logo from "../icons/computer.svg";
+import logo from "../icons/moon.svg";
+import Accordion from "../functionality/accordion";
+import { NavLink } from "react-router-dom";
 import "../App.css";
+import { connect } from "react-redux";
 
-function Startup() {
+import { logOut } from "../store/actions/actions";
+
+const PostedList = (props) => {
+  const { touched, errors, logInUser, history, token } = props;
+  if (!token) {
+    props.history.push(`/login/`);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <div>
-          <br />
-          <p>
-            Hello! <br /> Welcome to Total Top 5's!
-          </p>
-          <a href="./home">Let's go!</a>
+    <div className="home-container">
+      <h1 className="top-h1">Total Top 5's</h1>
+      <div className="Home">
+        <h1>Your Top 5's</h1>
+        <h3>
+          Thank You For Checking Out My App! <br />
+          Seeing Your Posted List Will Be An Available Feature Soon!
+        </h3>
+
+        <div className="second-nav-container">
+          <NavLink to="/home">
+            <button className="home">Home</button>
+          </NavLink>
         </div>
-      </header>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <img src={logo} className="App-logo" alt="logo" />
+        <br />
+        <br />
+        <br />
+        <br />
+      </div>
       <footer class="footer pt-80 pt-xs-60">
         <div class="footer-container">
           <h1>Total Top 5's</h1>
@@ -62,6 +86,12 @@ function Startup() {
       <br />
     </div>
   );
-}
+};
 
-export default Startup;
+const mapStateToProps = (state) => {
+  console.log(`THIS IS MSTP STATE IN LOGIN`, state);
+  return {
+    token: state.token,
+  };
+};
+export default connect(mapStateToProps, { logOut: logOut })(PostedList);
