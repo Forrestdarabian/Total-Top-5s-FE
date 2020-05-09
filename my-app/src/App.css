@@ -58,6 +58,7 @@
 
 button {
   background: #03ea5c;
+  font-family: "Roboto", normal;
   align-self: center;
   margin: 5px;
   padding: 0.5rem 2rem;

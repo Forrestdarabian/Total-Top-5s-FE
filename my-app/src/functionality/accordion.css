@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Eater&family=Londrina+Shadow&family=Orbitron&family=Peralta&family=Press+Start+2P&family=Unkempt&display=swap");
+
 /* Style the accordion section */
 .accordion__section {
   display: flex;
@@ -20,7 +22,7 @@
 
 /* Style the accordion content title */
 .accordion__title {
-  font-family: "Luckiest Guy", cursive;
+  font-family: "Roboto", normal;
   font-weight: 10;
   font-size: 14px;
   text-align: center;
@@ -46,7 +48,7 @@
 
 /* Style the accordion content text */
 .accordion__text {
-  font-family: "Luckiest Guy", cursive;
+  font-family: "Roboto", normal;
   font-weight: 400;
   font-size: 14px;
   padding: 18px;

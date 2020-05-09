@@ -49,12 +49,16 @@ const Register = (props) => {
         </h3>
         <div className="form-group">
           <label>Full name: </label>
-          <input type="text" className="form-control" placeholder="Full name" />
+          <input
+            type="text"
+            className="form-control"
+            placeholder=" Full name"
+          />
         </div>
         <br />
         <div className="form-group">
           <label>Username: </label>
-          <input type="text" className="form-control" placeholder="User name" />
+          <input type="text" className="form-control" placeholder=" Username" />
         </div>
         <br />
 
@@ -63,7 +67,7 @@ const Register = (props) => {
           <input
             type="password"
             className="form-control"
-            placeholder="Enter password"
+            placeholder=" Enter password"
           />
         </div>
         <br />
@@ -73,7 +77,7 @@ const Register = (props) => {
           <input
             type="email"
             className="form-control"
-            placeholder="Enter email"
+            placeholder=" Enter email"
           />
         </div>
         <br />

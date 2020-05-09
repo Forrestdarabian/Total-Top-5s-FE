@@ -79,18 +79,18 @@ export const fetchUser = (username) => (dispatch) => {
     );
 };
 
-// Fetching items
+// Fetching lists
 
 export const FETCH_START = "FETCH_START";
 export const FETCH_SUCCESS = "FETCH_SUCCESS";
 export const FETCH_FAILURE = "FETCH_FAILURE";
 
-export const fetchItem = () => (dispatch) => {
+export const fetchList = () => (dispatch) => {
   dispatch({ type: FETCH_START });
   axiosWithAuth()
-    .get(`/api/items`)
+    .get(`/api/users/lists`)
     .then((res) => {
-      console.log("fetched items", res);
+      console.log("fetched lists", res);
       dispatch({ type: FETCH_SUCCESS, payload: res.data });
     })
     .catch((err) => {
@@ -99,26 +99,26 @@ export const fetchItem = () => (dispatch) => {
 };
 
 // Items Action
-export const ADDING_ITEM = "ADDING_ITEM";
-export const ADD_ITEM_SUCCESS = "ADD_ITEM_SUCCESS";
-export const ADD_ITEM_FAILURE = "ADD_ITEM_FAILURE";
+export const ADDING_LIST = "ADDING_LIST";
+export const ADD_LIST_SUCCESS = "ADD_LIST_SUCCESS";
+export const ADD_LIST_FAILURE = "ADD_LIST_FAILURE";
 
-export const addLendItems = (lendItems) => (dispatch) => {
-  console.log(lendItems);
-  dispatch({ type: ADDING_ITEM });
+export const addLists = (listItems) => (dispatch) => {
+  console.log(listItems);
+  dispatch({ type: ADDING_LIST });
   axiosWithAuth()
-    .post(`/api/items`, lendItems)
+    .post(`/api/users/lists`, listItems)
     .then((res) => {
-      console.log(`ADD ITEMS`, res);
+      console.log(`ADD LISTS`, res);
       dispatch({
-        type: ADD_ITEM_SUCCESS,
+        type: ADD_LIST_SUCCESS,
         // payload: res.data
-        payload: lendItems,
+        payload: listItems,
       });
     })
     .catch((res) =>
       dispatch({
-        type: ADD_ITEM_FAILURE,
+        type: ADD_LIST_FAILURE,
         payload: res.data,
       })
     );
@@ -129,12 +129,15 @@ export const EDIT_START = "EDIT_START";
 export const EDIT_SUCCESS = "EDIT_SUCCESS";
 export const EDIT_FAILURE = "EDIT_FAILURE";
 
-export const updateItem = (updatedItem, id) => (dispatch) => {
+export const updateList = (updatedList, id) => (dispatch) => {
   dispatch({ type: EDIT_START });
   axiosWithAuth()
-    .put(`https://lenders-app.herokuapp.com/api/items/${id}`, updatedItem)
+    .put(
+      `https://total-top-5s.herokuapp.com/api/users/lists/${id}`,
+      updatedList
+    )
     .then((res) => {
-      dispatch({ type: EDIT_SUCCESS, payload: updatedItem });
+      dispatch({ type: EDIT_SUCCESS, payload: updatedList });
     })
     .catch((err) => {
       dispatch({ type: EDIT_FAILURE, payload: err.response.data.code });
@@ -143,21 +146,21 @@ export const updateItem = (updatedItem, id) => (dispatch) => {
 };
 
 //Delete Action
-export const DELETE_ITEM_START = "DELETE_ITEM_START";
-export const DELETE_ITEM_SUCCESS = "DELETE_ITEM_SUCCESS";
-export const DELETE_ITEM_FAILURE = "DELETE_ITEM_FAILURE";
+export const DELETE_LIST_START = "DELETE_LIST_START";
+export const DELETE_LIST_SUCCESS = "DELETE_LIST_SUCCESS";
+export const DELETE_LIST_FAILURE = "DELETE_LIST_FAILURE";
 
-export const deleteItem = (id) => (dispatch) => {
-  dispatch({ type: DELETE_ITEM_START });
+export const deleteList = (id) => (dispatch) => {
+  dispatch({ type: DELETE_LIST_START });
   axiosWithAuth()
-    .delete(`https://lenders-app.herokuapp.com/api/items/${id}`)
+    .delete(`https://total-top-5s.herokuapp.com/api/users/lists/${id}`)
     .then((res) => {
       console.log(res.data.message);
-      dispatch({ type: DELETE_ITEM_SUCCESS, payload: id });
+      dispatch({ type: DELETE_LIST_SUCCESS, payload: id });
     })
     .catch((err) => {
       console.log(err);
-      dispatch({ type: DELETE_ITEM_FAILURE, payload: err });
+      dispatch({ type: DELETE_LIST_FAILURE, payload: err });
     });
 };
 

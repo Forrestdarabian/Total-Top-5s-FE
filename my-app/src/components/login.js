@@ -46,7 +46,7 @@ const UserLogin = ({ touched, errors, logInUser, history, token }) => {
           className="form-control"
           type="text"
           name="username"
-          placeholder="Enter your Username"
+          placeholder=" Enter your Username"
           autoComplete="username"
         ></Field>
         {touched.username && errors.username && (
@@ -58,7 +58,7 @@ const UserLogin = ({ touched, errors, logInUser, history, token }) => {
           className="form-control"
           type="password"
           name="password"
-          placeholder="Enter your Password"
+          placeholder=" Enter your Password"
           autoComplete="current-password"
         ></Field>
         {touched.password && errors.password && (
