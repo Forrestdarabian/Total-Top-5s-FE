@@ -1,10 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Accordion from "../functionality/accordion";
-import logo from "../icons/musician.svg";
+import logo from "../icons/skull.svg";
 import "../App.css";
 
-function Music() {
+function Zombies() {
   return (
     <div className="home-container">
       <h1 className="top-h1">Total Top 5's</h1>
@@ -45,7 +45,7 @@ function Music() {
           <div>
             <br />
             <div className="text-section">
-              <h1>Music Artist Top 5's!</h1>
+              <h1>Call Of Duty Zombies Maps Top 5's!</h1>
               <h3>
                 Interested in Making Your Own Top 5's? Click{" "}
                 <a href="./create">Here!</a>
@@ -55,61 +55,62 @@ function Music() {
           <br />
           <br />
           <br />
-          <br />
-          <br />
           <img src={logo} className="App-logo" alt="logo" />
         </header>
         <br />
         <br />
         <br />
-        <h1>Choose a Decade Below!</h1>
-
+        <h1>Choose a Game Below!</h1>
         <Accordion
-          title="1980's - 1990's"
+          title="World At War"
           content="
-          <h3>5. Mr. Bungle</h3>
-          <p>Best Albums: California, Mr. Bungle</p>
-          <h3>4. Iron Maiden</h3>
-          <p>Best Albums: Brave New World, Seventh Son of a Seventh Son</p>
-          <h3>3. Nirvana</h3>
-          <p>Best Albums: In Utero, Nevermind </p>
-          <h3>2. Nine Inch Nails</h3>
-          <p>Best Albums: The Downward Spiral, Broken</p>
-          <h3>1. Pink Floyd</h3>
-          <p>Best Albums: Animals, The Wall </p>
-
+          <h3>5. N/A</h3>
+          <p></p>
+          <h3>4. Shi No Numa</h3>
+          <p>Pros: Introduced the PPSH, Dog Rounds, and Wunderwaffe DG-2, Great Atmosphere</p>
+          <p>Cons: No Pack-A-Punch, Map Layout is Very Basic</p>
+          <h3>3. Veruckt</h3>
+          <p>Pros: One of the Scariest Maps, Introduced Perk Machines and Traps</p>
+          <p>Cons: Map Layout is Tedious, No Pack-A-Punch or Dog Rounds</p>
+          <h3>2. Nacht Der Untoten</h3>
+          <p>Pros: Most Classic Zombies Experience, Paved the Road For Every Amazing Map Ahead</p>
+          <p>Cons: Only 3 Rooms, Gets Boring After Camping Forever</p>
+          <h3>1. Der Riese</h3>
+          <p>Pros: Very Innovative Map, Introduced Pack-A-Punch, Great Camping Spots</p>
           "
         />
         <Accordion
-          title="2000's"
+          title="Black Ops 1"
           content="
-          <h3>5. Eminem</h3>
-          <p>Best Albums: Relapse, Recovery </p>
-          <h3>4. Avenged Sevenfold</h3>
-          <p>Best Albums: Nightmare, Avenged Sevenfold </p>
-          <h3>3. Blink-182</h3>
-          <p>Best Albums: Enema Of The State, Take Off Your Pants And Jacket </p>
-          <h3>2. Brand New</h3>
-          <p>Best Albums: The Devil and God Are Raging Inside Me, Deja Entendu </p>
-          <h3>1. Slipknot</h3>
-          <p>Best Albums: Slipknot, We Are Not Your Kind </p>
-
+          <h3>5. N/A</h3>
+          <p></p>
+          <h3>4. Five</h3>
+          <p>Pros: Introduced the PPSH, Dog Rounds, and Wunderwaffe DG-2, Great Atmosphere</p>
+          <p>Cons: No Pack-A-Punch, Map Layout is Very Basic</p>
+          <h3>3. Shangri-La</h3>
+          <p>Pros: Most Visually-Stunning Map, Best Wonder Weapon (Baby Gun)</p>
+          <p>Cons: Map Layout is Very Tedious, Need Communication For Pack-A-Punch</p>
+          <h3>2. Ascension</h3>
+          <p>Pros: Very Well-Structured Map, Great Camping Spots</p>
+          <p>Cons: Monkey Rounds Can Be Hard With Lack Of Communication, Gets Boring After Camping Forever</p>
+          <h3>1. Call Of The Dead</h3>
+          <p>Pros: Very Nostalgic Experience, Best Easter-Egg Song, Keeps You On Your Feet</p>
           "
         />
         <Accordion
-          title="2010's"
+          title="Black Ops 2"
           content="
-          <h3>5. AWOLNATION</h3>
-          <p>Best Albums: Megalithic Symphony, Run </p>
-          <h3>4. The Neighbourhood</h3>
-          <p>Best Albums: Wiped Out!, The Neighbourhood </p>
-          <h3>3. The 1975</h3>
-          <p>Best Albums: The 1975, I Like it When You Sleep, for You Are So Beautiful yet So Unaware of It </p>
-          <h3>2. Cage The Elephant</h3>
-          <p>Best Albums: Thank You, Happy Birthday, Melophobia</p>
-          <h3>1. Arctic Monkeys</h3>
-          <p>Best Albums: Humbug, Favourite Worst Nightmare </p>
-
+          <h3>5. Halloween (2007)</h3>
+          <p>Pros: </p>
+          <p>Cons: </p>
+          "
+        />
+        <Accordion
+          title="Black Ops 3"
+          content="
+          <h3>5. Halloween (2007)</h3>
+          <p>Pros: </p>
+          <p>Cons: </p>
           "
         />
       </div>
@@ -164,4 +165,4 @@ function Music() {
   );
 }
 
-export default Music;
+export default Zombies;

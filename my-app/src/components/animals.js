@@ -1,10 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Accordion from "../functionality/accordion";
-import logo from "../icons/videocamera.svg";
+import logo from "../icons/cow.svg";
 import "../App.css";
 
-function Movies() {
+function Animals() {
   return (
     <div className="home-container">
       <h1 className="top-h1">Total Top 5's</h1>
@@ -45,7 +45,7 @@ function Movies() {
           <div>
             <br />
             <div className="text-section">
-              <h1>Movie Top 5's!</h1>
+              <h1>Animal Top 5's!</h1>
               <h3>
                 Interested in Making Your Own Top 5's? Click{" "}
                 <a href="./create">Here!</a>
@@ -60,9 +60,9 @@ function Movies() {
         <br />
         <br />
         <br />
-        <h1>Choose a Movie Genre Below!</h1>
+        <h1>Choose an Animal Type Below!</h1>
         <Accordion
-          title="Action"
+          title="Sea"
           content="
           <h3>5. Django Unchained (2012)</h3>
           <p>Two years before the Civil War, Django (Jamie Foxx), a slave, finds himself accompanying an unorthodox German bounty hunter named Dr. King Schultz (Christoph Waltz) on a mission to capture the vicious Brittle brothers. Their mission successful, Schultz frees Django, and together they hunt the South's most-wanted criminals. Their travels take them to the infamous plantation of shady Calvin Candie (Leonardo DiCaprio), where Django's long-lost wife (Kerry Washington) is still a slave.</p>
@@ -78,7 +78,7 @@ function Movies() {
           "
         />
         <Accordion
-          title="Drama"
+          title="Land"
           content="
           <h3>5. Requiem for a Dream (2000)</h3>
           <p>Imaginatively evoking the inner landscape of human beings longing to connect, to love and feel loved, the film is a parable of happiness gloriously found and tragically lost. Requiem for a Dream tells parallel stories that are linked by the relationship between the lonely, widowed Sara Goldfarb and her sweet but aimless son, Harry. The plump Sara, galvanized by the prospect of appearing on a TV game show, has started on a dangerous diet regimen to beautify herself for a national audience.</p>
@@ -94,7 +94,7 @@ function Movies() {
           "
         />
         <Accordion
-          title="Horror"
+          title="Air"
           content="
           <h3>5. Halloween (2007)</h3>
           <p>Nearly two decades after being committed to a mental institution for killing his stepfather and older sister, Michael Myers (Tyler Mane) breaks out, intent on returning to the town of Haddonfield, Ill. He arrives in his hometown on Halloween with the indomitable purpose of hunting down his younger sister, Laurie (Scout Taylor-Compton). The only thing standing between Michael and a Halloween night of bloody carnage is psychologist Dr. Samuel Loomis (Malcolm McDowell).</p>
@@ -160,4 +160,4 @@ function Movies() {
   );
 }
 
-export default Movies;
+export default Animals;

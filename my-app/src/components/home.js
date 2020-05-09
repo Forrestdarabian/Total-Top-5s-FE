@@ -25,6 +25,18 @@ function Home(props) {
           <NavLink to="/games">
             <button className="games">Video Games</button>
           </NavLink>
+          <NavLink to="/animals">
+            <button className="games">Animals</button>
+          </NavLink>
+          <NavLink to="/game-consoles">
+            <button className="games">Game Consoles</button>
+          </NavLink>
+          <NavLink to="/holidays">
+            <button className="games">Holidays</button>
+          </NavLink>
+          <NavLink to="/zombies-maps">
+            <button className="zombies">Zombies Maps</button>
+          </NavLink>
         </div>
         <br />
         <div className="second-nav-container">
