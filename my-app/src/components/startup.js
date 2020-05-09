@@ -30,7 +30,7 @@ function Startup() {
             </p>
           </div>
           <div>
-            Icons made by{" "}
+            Icons made by
             <a
               href="https://www.flaticon.com/authors/smalllikeart"
               title="smalllikeart"
@@ -49,7 +49,7 @@ function Startup() {
               <a href="mailto:forrestdarabian@gmail.com">
                 <i class="ion-ios-email fa-icons"></i>
                 Contact Me
-              </a>{" "}
+              </a>
             </li>
             <li>
               <a href="https://www.forrestdarabian.com/">
@@ -58,7 +58,7 @@ function Startup() {
             </li>
           </div>
         </div>
-      </footer>{" "}
+      </footer>
       <br />
       <br />
       <br />

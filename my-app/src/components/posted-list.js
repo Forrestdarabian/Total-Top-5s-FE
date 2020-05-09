@@ -1,9 +1,8 @@
 import React from "react";
-import logo from "../icons/moon.svg";
-import Accordion from "../functionality/accordion";
-import { NavLink } from "react-router-dom";
-import "../App.css";
 import { connect } from "react-redux";
+import { NavLink } from "react-router-dom";
+import logo from "../icons/moon.svg";
+import "../App.css";
 
 import { logOut } from "../store/actions/actions";
 

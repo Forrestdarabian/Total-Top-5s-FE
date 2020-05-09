@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "../icons/tv.svg";
 import Accordion from "../functionality/accordion";
 import { NavLink } from "react-router-dom";
+import logo from "../icons/tv.svg";
 import "../App.css";
 
 function Movies() {
@@ -35,8 +35,8 @@ function Movies() {
             <div className="text-section">
               <h1>T.V. Show Top 5's!</h1>
               <h3>
-                Interested in Making Your Own Top 5's? Click{" "}
-                <a href="./create">Here!</a>
+                Interested in Making Your Own Top 5's? Click
+                <a href="./create"> Here!</a>
               </h3>
             </div>
           </div>
@@ -98,7 +98,7 @@ function Movies() {
             </p>
           </div>
           <div>
-            Icons made by{" "}
+            Icons made by
             <a
               href="https://www.flaticon.com/authors/smalllikeart"
               title="smalllikeart"
@@ -126,7 +126,7 @@ function Movies() {
             </li>
           </div>
         </div>
-      </footer>{" "}
+      </footer>
       <br />
       <br />
       <br />

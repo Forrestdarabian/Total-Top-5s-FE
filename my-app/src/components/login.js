@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Button, Label } from "reactstrap";
-import logo from "../icons/space.svg";
-import { NavLink } from "react-router-dom";
-
-import { Form, Field, withFormik } from "formik";
 import * as Yup from "yup";
-// import axios from "axios";
-import "../App.css";
-
+import { Button, Label } from "reactstrap";
+import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-
+import { Form, Field, withFormik } from "formik";
 import { logInUser } from "../../src/store/actions/actions";
+import logo from "../icons/space.svg";
+import "../App.css";
 
 const UserLogin = ({ touched, errors, logInUser, history, token }) => {
   const [user, setUser] = useState({
@@ -43,10 +39,11 @@ const UserLogin = ({ touched, errors, logInUser, history, token }) => {
         <h1>Login</h1>
         <h3>
           Don't Have An Account? Click
-          <a href="./register"> Here</a> To Register!
+          <a href="/register"> Here</a> To Register!
         </h3>
         <Label for="username">Username: </Label>
         <Field
+          className="form-control"
           type="text"
           name="username"
           placeholder="Enter your Username"
@@ -58,6 +55,7 @@ const UserLogin = ({ touched, errors, logInUser, history, token }) => {
         <br /> <br />
         <Label for="password">Password: </Label>
         <Field
+          className="form-control"
           type="password"
           name="password"
           placeholder="Enter your Password"

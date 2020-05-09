@@ -1,13 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import logo from "../icons/halloween.svg";
 import { NavLink } from "react-router-dom";
-
+import logo from "../icons/halloween.svg";
 import axiosWithAuth from "../utils/axiosWithAuth";
-
 import { addUser } from "../store/actions/actions";
-
-// import "./Register.scss";
 
 const Register = (props) => {
   console.log(props);
@@ -20,10 +16,7 @@ const Register = (props) => {
       password: e.target[2].value,
       email: e.target[3].value,
     };
-    //  props.form.validateFieldsAndScroll((err, values) => {
 
-    // if (!err) {
-    //let res = await props.addUser(tempUser);
     await axiosWithAuth()
       .post(`api/users/register`, {
         fullName: user.fullName,
@@ -43,38 +36,7 @@ const Register = (props) => {
         alert(err.response.data.message);
         return err;
       });
-
-    //props.form.setFieldsValue({ username: "", password: "" });
-    //props.history.push(`/login/`);
-    // }
-    // });
   };
-
-  // const { getFieldDecorator } = props.form;
-
-  // const formItemLayout = {
-  //   labelCol: {
-  //     xs: { span: 24 },
-  //     sm: { span: 8 },
-  //   },
-  //   wrapperCol: {
-  //     xs: { span: 24 },
-  //     sm: { span: 16 },
-  //   },
-  // };
-
-  // const tailFormItemLayout = {
-  //   wrapperCol: {
-  //     xs: {
-  //       span: 24,
-  //       offset: 0,
-  //     },
-  //     sm: {
-  //       span: 16,
-  //       offset: 8,
-  //     },
-  //   },
-  // };
 
   return (
     <div className="sign-up-container">
@@ -83,7 +45,7 @@ const Register = (props) => {
         <h1>Sign Up</h1>
         <h3>
           Already Have An Account? Click
-          <a href="./login"> Here</a> To Sign In!
+          <a href="/login"> Here</a> To Sign In!
         </h3>
         <div className="form-group">
           <label>Full name: </label>

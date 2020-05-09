@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "../icons/videocamera.svg";
-import Accordion from "../functionality/accordion";
 import { NavLink } from "react-router-dom";
+import Accordion from "../functionality/accordion";
+import logo from "../icons/videocamera.svg";
 import "../App.css";
 
 function Movies() {
