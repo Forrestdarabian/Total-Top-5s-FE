@@ -82,11 +82,12 @@ function Zombies() {
         <Accordion
           title="Black Ops 1"
           content="
-          <h3>5. N/A</h3>
-          <p></p>
+          <h3>5. Moon</h3>
+          <p>Pros: Best Easter Egg, Fun Pack-A-Punch Location</p>
+          <p>Cons: Some Sections of the Map Are a Bit Hard to Get Through For New Players</p>
           <h3>4. Five</h3>
-          <p>Pros: Introduced the PPSH, Dog Rounds, and Wunderwaffe DG-2, Great Atmosphere</p>
-          <p>Cons: No Pack-A-Punch, Map Layout is Very Basic</p>
+          <p>Pros: Memorable Cast, Pentagon Thief and Winters Howl are Great Additions</p>
+          <p>Cons: Very Compact Map, Hard to Traverse</p>
           <h3>3. Shangri-La</h3>
           <p>Pros: Most Visually-Stunning Map, Best Wonder Weapon (Baby Gun)</p>
           <p>Cons: Map Layout is Very Tedious, Need Communication For Pack-A-Punch</p>
@@ -97,7 +98,7 @@ function Zombies() {
           <p>Pros: Very Nostalgic Experience, Best Easter-Egg Song, Keeps You On Your Feet</p>
           "
         />
-        <Accordion
+        {/* <Accordion
           title="Black Ops 2"
           content="
           <h3>5. Halloween (2007)</h3>
@@ -112,7 +113,7 @@ function Zombies() {
           <p>Pros: </p>
           <p>Cons: </p>
           "
-        />
+        /> */}
       </div>
       <br />
       <br />
