@@ -1,41 +1,108 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-import { logOut } from "../store/actions/actions";
+import { logOut, addLists } from "../store/actions/actions";
 import logo from "../icons/hammer.svg";
 import "../App.css";
 
-const Create = (props) => {
-  const { touched, errors, logInUser, history, token } = props;
+const Create = ({
+  touched,
+  errors,
+  logInUser,
+  history,
+  token,
+  addLists,
+  category,
+  subcategory,
+  description,
+  name,
+}) => {
   if (!token) {
-    props.history.push(`/login/`);
+    history.push(`/login/`);
   }
+
+  const [listItem, setListItem] = useState({
+    category: "Movies",
+    subcategory: "Action",
+    name: "",
+    description: "",
+  });
+
+  const [selectedCategory, setCategory] = useState("Movies");
+
+  const CategoryMapping = {
+    Movies: ["Action", "Drama", "Horror"],
+    Music: ["80's - 90's", "2000's", "2010's"],
+    TV: ["Comedy", "Drama"],
+    Games: ["2000's"],
+  };
+
+  const handleChanges = (e) => {
+    if (e.currentTarget.id == "category") {
+      setCategory(e.target.value);
+      let currentlistItem = listItem;
+      listItem.category = e.target.value;
+      listItem.subcategory = CategoryMapping[e.target.value][0];
+
+      setListItem();
+    }
+    setListItem({ ...listItem, [e.target.name]: e.target.value });
+  };
+
+  // Movies - Action, Drama, Horror
+  // Music - 80s - 90s, 2000s, 2010s
+  // TV - Comedy Drama
+  // Games - 2000s
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(listItem);
+    addLists(listItem);
+    history.push(`/posted-list`);
+    // document.getElementById("clear-input").reset();
+  };
 
   return (
     <div className="home-container">
       <h1 className="top-h1">Total Top 5's</h1>
       <div className="Home">
-        <form>
+        <form id="clear-input" onSubmit={(e) => handleSubmit(e)}>
           <h1>Create a Top 5 List</h1>
           <h3>Users Will Be Able To See Your Top 5's</h3>
           <div className="form-group">
             <label>Pick a Category: </label>
-            <select className="form-control" id="category" name="category">
-              <option value="Movies"> Movies</option>
-              {/* <option value="Music">Music</option>
-              <option value="T.V. Shows">T.V. Shows</option>
-              <option value="Video Games">Video Games</option> */}
+            <select
+              className="form-control"
+              id="category"
+              type="text"
+              name="category"
+              placeholder="Pick a Category"
+              value={category}
+              onChange={handleChanges}
+              required
+            >
+              {Object.keys(CategoryMapping).map((item) => {
+                return <option value={item}> {item}</option>;
+              })}
             </select>
           </div>
           <br />
           <div className="form-group">
-            <label>Pick a Genre / Decade: </label>
-            <select className="form-control" id="genre" name="genre">
-              <option className="form-control" value="Movies">
-                Action
-              </option>
-              <option value="Movies"> Drama</option>
-              <option value="Movies"> Horror</option>
+            <label>Pick a Subcategory: </label>
+            <select
+              className="form-control"
+              id="subcategory"
+              type="text"
+              name="subcategory"
+              placeholder="Choose a Subcategory"
+              value={subcategory}
+              onChange={handleChanges}
+              required
+            >
+              {CategoryMapping[selectedCategory].map((item) => {
+                return <option value={item}> {item}</option>;
+              })}
+
               {/* <option value="Music">1980's - 1990's</option>
               <option value="Music">2000's</option>
               <option value="Music">2010's</option>
@@ -45,99 +112,159 @@ const Create = (props) => {
             </select>
           </div>
           <br />
-          <div className="form-group">
+          {/* <div className="form-group">
             <label>5th Pick: </label>
             <input
-              type="text"
               className="form-control"
-              placeholder=" Movie Name"
+              id="name"
+              type="text"
+              name="name"
+              maxLength={20}
+              placeholder="Name"
+              value={name}
+              onChange={(e) => handleChanges(e)}
+              required
             />
           </div>
           <br />
           <div className="form-group">
             <label>Description: </label>
             <input
-              type="text"
               className="form-control"
-              placeholder=" Movie Description"
+              id="description"
+              type="text"
+              name="description"
+              maxLength={200}
+              placeholder="Description"
+              value={description}
+              onChange={(e) => handleChanges(e)}
+              required
             />
           </div>
           <br />
           <div className="form-group">
             <label>4th Pick: </label>
             <input
-              type="text"
               className="form-control"
-              placeholder=" Movie Name"
+              id="name"
+              type="text"
+              name="name"
+              maxLength={20}
+              placeholder="Name"
+              value={name}
+              onChange={(e) => handleChanges(e)}
+              required
             />
           </div>
           <br />
           <div className="form-group">
             <label>Description: </label>
             <input
-              type="text"
               className="form-control"
-              placeholder=" Movie Description"
+              id="description"
+              type="text"
+              name="description"
+              maxLength={200}
+              placeholder="Description"
+              value={description}
+              onChange={(e) => handleChanges(e)}
+              required
             />
           </div>
           <br />
           <div className="form-group">
             <label>3rd Pick: </label>
             <input
-              type="text"
               className="form-control"
-              placeholder=" Movie Name"
+              id="name"
+              type="text"
+              name="name"
+              maxLength={20}
+              placeholder="Name"
+              value={name}
+              onChange={(e) => handleChanges(e)}
+              required
             />
           </div>
           <br />
           <div className="form-group">
             <label>Description: </label>
             <input
-              type="text"
               className="form-control"
-              placeholder=" Movie Description"
+              id="description"
+              type="text"
+              name="description"
+              maxLength={200}
+              placeholder="Description"
+              value={description}
+              onChange={(e) => handleChanges(e)}
+              required
             />
           </div>
           <br />
           <div className="form-group">
             <label>2nd Pick: </label>
             <input
-              type="text"
               className="form-control"
-              placeholder=" Movie Name"
+              id="name"
+              type="text"
+              name="name"
+              maxLength={20}
+              placeholder="Name"
+              value={name}
+              onChange={(e) => handleChanges(e)}
+              required
             />
           </div>
           <br />
           <div className="form-group">
             <label>Description: </label>
             <input
-              type="text"
               className="form-control"
-              placeholder=" Movie Description"
+              id="description"
+              type="text"
+              name="description"
+              maxLength={200}
+              placeholder="Description"
+              value={description}
+              onChange={(e) => handleChanges(e)}
+              required
             />
           </div>
-          <br />
+          <br /> */}
           <div className="form-group">
             <label>1st Pick: </label>
             <input
-              type="text"
               className="form-control"
-              placeholder=" Movie Name"
+              id="name"
+              type="text"
+              name="name"
+              maxLength={50}
+              placeholder="Name"
+              value={name}
+              onChange={(e) => handleChanges(e)}
+              required
             />
           </div>
           <br />
           <div className="form-group">
             <label>Description: </label>
             <input
-              type="text"
               className="form-control"
-              placeholder=" Movie Description"
+              id="description"
+              type="text"
+              name="description"
+              maxLength={200}
+              placeholder="Description"
+              value={description}
+              onChange={(e) => handleChanges(e)}
+              required
             />
           </div>
           <br />
-          <NavLink to="/posted-list">
-            <button className="home">Submit</button>
-          </NavLink>{" "}
+          <button type="submit" className="home">
+            Submit
+          </button>
           <br />
           <br />
         </form>
@@ -208,9 +335,10 @@ const Create = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log(`THIS IS MSTP STATE IN LOGIN`, state);
+  console.log(`THIS IS MSTP FORM`, state);
   return {
+    state: state,
     token: state.token,
   };
 };
-export default connect(mapStateToProps, { logOut: logOut })(Create);
+export default connect(mapStateToProps, { addLists })(Create);

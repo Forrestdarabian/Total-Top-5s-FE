@@ -1,5 +1,7 @@
 import axios from "axios";
 
+const isTesting = true;
+
 const axiosWithAuth = () => {
   const token = localStorage.getItem("token");
 
@@ -8,7 +10,9 @@ const axiosWithAuth = () => {
       "Content-Type": "application/json",
       authorization: `${token}`,
     },
-    baseURL: "https://total-top-5s.herokuapp.com/",
+    baseURL: isTesting
+      ? "http://localhost:5000/"
+      : "https://total-top-5s.herokuapp.com/",
   });
 };
 export default axiosWithAuth;

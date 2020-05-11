@@ -1,31 +1,77 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 import logo from "../icons/moon.svg";
 import "../App.css";
+import Card from "./card-view";
 
-import { logOut } from "../store/actions/actions";
+import { logOut, fetchList } from "../store/actions/actions";
+
+// const { Meta } = div;
 
 const PostedList = (props) => {
   const { touched, errors, logInUser, history, token } = props;
+
   if (!token) {
     props.history.push(`/login/`);
   }
+  useEffect(() => {
+    props.fetchList();
+  }, []);
+
+  const handleDelete = (e) => {
+    e.preventDefault();
+    const id = props.item.id;
+    props.deleteList(id);
+  };
 
   return (
     <div className="home-container">
       <h1 className="top-h1">Total Top 5's</h1>
       <div className="Home">
-        <h1>Your Top 5's</h1>
-        <h3>
-          Thank You For Checking Out My App! <br />
-          Seeing Your Posted List Will Be An Available Feature Soon!
-        </h3>
-
-        <div className="second-nav-container">
-          <NavLink to="/home">
-            <button className="home">Home</button>
-          </NavLink>
+        <NavLink to="/home">
+          <button className="home">Home</button>
+        </NavLink>
+        <div
+          actions={[
+            <button
+              className="icon-delete"
+              type="delete"
+              key="delete"
+              onClick={handleDelete}
+            />,
+            <NavLink
+              className="icon-edit"
+              // to={`/dashboard/edit-items/${props.item.id}`}
+            >
+              <button type="edit" key="edit" />
+            </NavLink>,
+          ]}
+        >
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              alignContent: "center",
+              flexDirection: "column",
+              width: "100%",
+            }}
+          >
+            {/* <p>
+              {props.itemData.length > 0
+                ? props.itemData[0].description
+                : "not working"}
+            </p> */}
+            {props.itemData.map((item) => {
+              return <Card item={item} />;
+            })}
+          </div>
+          {/* <div
+            category={props.itemData.category}
+            subcategory={props.itemData.subcategory}
+            name={props.itemData.name}
+            description={props.itemData.description}
+          /> */}
         </div>
 
         <br />
@@ -90,7 +136,9 @@ const PostedList = (props) => {
 const mapStateToProps = (state) => {
   console.log(`THIS IS MSTP STATE IN LOGIN`, state);
   return {
+    itemData: state.itemData,
+    error: state.error,
     token: state.token,
   };
 };
-export default connect(mapStateToProps, { logOut: logOut })(PostedList);
+export default connect(mapStateToProps, { fetchList })(PostedList);

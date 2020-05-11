@@ -159,6 +159,7 @@ const mapStateToProps = (state) => {
   console.log(`THIS IS MSTP STATE IN LOGIN`, state);
   return {
     token: state.token,
+    logInUser: state.logInUser,
   };
 };
 export default connect(mapStateToProps, { logOut: logOut })(Home);
