@@ -32,6 +32,16 @@ const PostedList = (props) => {
         <NavLink to="/home">
           <button className="home">Home</button>
         </NavLink>
+        <div>
+          <br />
+          <div className="text-section">
+            <h1>Users Posts</h1>
+            <h3>
+              Below Are User Submitted Posts. If you Recently Made A Post <br />{" "}
+              You Will Find It At The Bottom
+            </h3>
+          </div>
+        </div>{" "}
         <div
           actions={[
             <button
@@ -73,7 +83,6 @@ const PostedList = (props) => {
             description={props.itemData.description}
           /> */}
         </div>
-
         <br />
         <br />
         <br />

@@ -53,15 +53,20 @@ function Home(props) {
             &uarr; Click a Category Above To See Examples of Some Top 5's!
           </h3>
           {token ? (
-            <button
-              className="home"
-              onClick={() => {
-                props.logOut();
-                props.history.push(`/login/`);
-              }}
-            >
-              Logout
-            </button>
+            <div>
+              <button
+                className="home"
+                onClick={() => {
+                  props.logOut();
+                  props.history.push(`/login/`);
+                }}
+              >
+                Logout
+              </button>
+              <NavLink to="/posted-list">
+                <button className="home">Users Posts</button>
+              </NavLink>
+            </div>
           ) : (
             <>
               {" "}
