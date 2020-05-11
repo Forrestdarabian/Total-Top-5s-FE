@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const isTesting = true;
+const isTesting = false;
 
 const axiosWithAuth = () => {
   const token = localStorage.getItem("token");
