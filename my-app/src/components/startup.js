@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../icons/computer.svg";
 import "../App.css";
+import { NavLink } from "react-router-dom";
 
 function Startup() {
   return (
@@ -14,7 +15,9 @@ function Startup() {
           <p>
             Hello! <br /> Welcome to Total Top 5's!
           </p>
-          <a href="./home">Let's go!</a>
+          <NavLink to="/home">
+            <button className="home">Enter Site</button>
+          </NavLink>
         </div>
       </header>
       <footer class="footer pt-80 pt-xs-60">
