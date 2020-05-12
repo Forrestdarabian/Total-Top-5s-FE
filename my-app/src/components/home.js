@@ -54,6 +54,13 @@ function Home(props) {
           </h3>
           {token ? (
             <div>
+              <NavLink to="/create">
+                <button className="home">Make a Top 5</button>
+              </NavLink>
+              <NavLink to="/posted-list">
+                <button className="home">Users Posts</button>
+              </NavLink>
+              <br />
               <button
                 className="home"
                 onClick={() => {
@@ -63,9 +70,6 @@ function Home(props) {
               >
                 Logout
               </button>
-              <NavLink to="/posted-list">
-                <button className="home">Users Posts</button>
-              </NavLink>
             </div>
           ) : (
             <>

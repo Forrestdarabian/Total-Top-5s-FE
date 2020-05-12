@@ -16,6 +16,7 @@ import ShareIcon from "@material-ui/icons/Share";
 import EditIcon from "@material-ui/icons/Edit";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import logo from "../icons/architecture-and-city.svg";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
@@ -49,12 +50,36 @@ export default function CardView({ item }) {
 
   return (
     <Card className={classes.root} style={{ margin: "20px", width: "300px" }}>
-      <CardHeader
-        title={item.name}
-        subheader={item.category + " - " + item.subcategory}
-      />
+      <CardHeader title={item.category} subheader={item.subcategory} />
       <CardMedia className={classes.media} image={logo} title={item.name} />
       <CardContent>
+        <Typography variant="body1" color="textPrimary" component="h1">
+          5. {item.nameFive}
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
+          {item.descriptionFive}
+        </Typography>
+        <Typography variant="body1" color="textPrimary" component="h1">
+          4. {item.nameFour}
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
+          {item.descriptionFour}
+        </Typography>
+        <Typography variant="body1" color="textPrimary" component="h1">
+          3. {item.nameThree}
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
+          {item.descriptionThree}
+        </Typography>
+        <Typography variant="body1" color="textPrimary" component="h1">
+          2. {item.nameTwo}
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
+          {item.descriptionTwo}
+        </Typography>
+        <Typography variant="body1" color="textPrimary" component="h1">
+          1. {item.name}
+        </Typography>
         <Typography variant="body2" color="textSecondary" component="p">
           {item.description}
         </Typography>

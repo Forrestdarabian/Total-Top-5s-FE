@@ -14,8 +14,16 @@ const Create = ({
   addLists,
   category,
   subcategory,
-  description,
+  nameFive,
+  descriptionFive,
+  nameFour,
+  descriptionFour,
+  nameThree,
+  descriptionThree,
+  nameTwo,
+  descriptionTwo,
   name,
+  description,
 }) => {
   if (!token) {
     history.push(`/login/`);
@@ -24,6 +32,14 @@ const Create = ({
   const [listItem, setListItem] = useState({
     category: "Movies",
     subcategory: "Action",
+    nameFive: "",
+    descriptionFive: "",
+    nameFour: "",
+    descriptionFour: "",
+    nameThree: "",
+    descriptionThree: "",
+    nameTwo: "",
+    descriptionTwo: "",
     name: "",
     description: "",
   });
@@ -112,16 +128,16 @@ const Create = ({
             </select>
           </div>
           <br />
-          {/* <div className="form-group">
+          <div className="form-group">
             <label>5th Pick: </label>
             <input
               className="form-control"
-              id="name"
+              id="nameFive"
               type="text"
-              name="name"
-              maxLength={20}
+              name="nameFive"
+              maxLength={50}
               placeholder="Name"
-              value={name}
+              value={nameFive}
               onChange={(e) => handleChanges(e)}
               required
             />
@@ -131,12 +147,12 @@ const Create = ({
             <label>Description: </label>
             <input
               className="form-control"
-              id="description"
+              id="descriptionFive"
               type="text"
-              name="description"
+              name="descriptionFive"
               maxLength={200}
               placeholder="Description"
-              value={description}
+              value={descriptionFive}
               onChange={(e) => handleChanges(e)}
               required
             />
@@ -146,12 +162,12 @@ const Create = ({
             <label>4th Pick: </label>
             <input
               className="form-control"
-              id="name"
+              id="nameFour"
               type="text"
-              name="name"
-              maxLength={20}
+              name="nameFour"
+              maxLength={50}
               placeholder="Name"
-              value={name}
+              value={nameFour}
               onChange={(e) => handleChanges(e)}
               required
             />
@@ -161,12 +177,12 @@ const Create = ({
             <label>Description: </label>
             <input
               className="form-control"
-              id="description"
+              id="descriptionFour"
               type="text"
-              name="description"
+              name="descriptionFour"
               maxLength={200}
               placeholder="Description"
-              value={description}
+              value={descriptionFour}
               onChange={(e) => handleChanges(e)}
               required
             />
@@ -176,12 +192,12 @@ const Create = ({
             <label>3rd Pick: </label>
             <input
               className="form-control"
-              id="name"
+              id="nameThree"
               type="text"
-              name="name"
-              maxLength={20}
+              name="nameThree"
+              maxLength={50}
               placeholder="Name"
-              value={name}
+              value={nameThree}
               onChange={(e) => handleChanges(e)}
               required
             />
@@ -191,12 +207,12 @@ const Create = ({
             <label>Description: </label>
             <input
               className="form-control"
-              id="description"
+              id="descriptionThree"
               type="text"
-              name="description"
+              name="descriptionThree"
               maxLength={200}
               placeholder="Description"
-              value={description}
+              value={descriptionThree}
               onChange={(e) => handleChanges(e)}
               required
             />
@@ -206,12 +222,12 @@ const Create = ({
             <label>2nd Pick: </label>
             <input
               className="form-control"
-              id="name"
+              id="nameTwo"
               type="text"
-              name="name"
-              maxLength={20}
+              name="nameTwo"
+              maxLength={50}
               placeholder="Name"
-              value={name}
+              value={nameTwo}
               onChange={(e) => handleChanges(e)}
               required
             />
@@ -221,17 +237,17 @@ const Create = ({
             <label>Description: </label>
             <input
               className="form-control"
-              id="description"
+              id="descriptionTwo"
               type="text"
-              name="description"
+              name="descriptionTwo"
               maxLength={200}
               placeholder="Description"
-              value={description}
+              value={descriptionTwo}
               onChange={(e) => handleChanges(e)}
               required
             />
           </div>
-          <br /> */}
+          <br />
           <div className="form-group">
             <label>1st Pick: </label>
             <input
