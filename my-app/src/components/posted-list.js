@@ -29,6 +29,13 @@ const PostedList = (props) => {
     <div className="home-container">
       <h1 className="top-h1">Total Top 5's</h1>
       <div className="Home">
+        <div className="nav-container">
+          <NavLink to="/create">
+            <button className="home">Make a Top 5</button>
+          </NavLink>
+          <br />
+        </div>
+        <br />
         <NavLink to="/home">
           <button className="home">Home</button>
         </NavLink>
@@ -42,6 +49,7 @@ const PostedList = (props) => {
             </h3>
           </div>
         </div>{" "}
+        <br />
         <div
           actions={[
             <button
