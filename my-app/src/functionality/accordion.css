@@ -5,6 +5,8 @@
   display: flex;
   flex-direction: column;
   margin: 20px;
+  margin-left: 125px;
+  margin-right: 125px;
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
@@ -52,4 +54,18 @@
   font-weight: 400;
   font-size: 14px;
   padding: 18px;
+}
+
+@media (min-width: 1285px) {
+  .accordion__section {
+    margin-left: 500px;
+    margin-right: 500px;
+  }
+}
+
+@media (max-width: 779px) {
+  .accordion__section {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
