@@ -16,6 +16,20 @@
   }
 }
 
+@media (min-width: 1285px) {
+  div.text-section {
+    margin-left: 500px;
+    margin-right: 500px;
+  }
+}
+
+/* @media (min-width: 1285px) {
+  div.footer-container {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+} */
+
 .App-header {
   background-color: blueviolet;
   min-height: 100vh;
@@ -48,7 +62,7 @@
   padding-bottom: 50px;
   padding-top: 25px;
 }
-@media (max-width: 590px) {
+@media (max-width: 779px) {
   .text-section {
     margin-left: 10px;
     margin-right: 10px;
@@ -114,7 +128,7 @@ form {
   border-style: solid;
 }
 
-@media (max-width: 590px) {
+@media (max-width: 779px) {
   form {
     background: linear-gradient(rgb(230, 11, 175), yellow);
     margin-left: 10px;
@@ -141,11 +155,11 @@ h1.top-h1 {
 
 .nav-container {
   background: linear-gradient(rgb(230, 11, 175), yellow);
-  margin-left: 125px;
-  margin-right: 125px;
+  margin-left: 300px;
+  margin-right: 300px;
   border-style: solid;
 }
-@media (max-width: 590px) {
+@media (max-width: 779px) {
   .nav-container {
     margin-left: 10px;
     margin-right: 10px;
@@ -159,7 +173,7 @@ h1.top-h1 {
   margin-right: 125px;
   border-style: solid;
 }
-@media (max-width: 590px) {
+@media (max-width: 779px) {
   .second-nav-container {
     margin-left: 10px;
     margin-right: 10px;
@@ -179,7 +193,14 @@ footer {
   border-style: solid;
 }
 
-@media (max-width: 590px) {
+@media (min-width: 1680px) {
+  footer {
+    margin-left: 750px;
+    margin-right: 750px;
+  }
+}
+
+@media (max-width: 779px) {
   footer {
     margin-left: 10px;
     margin-right: 10px;

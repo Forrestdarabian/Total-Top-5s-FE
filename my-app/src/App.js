@@ -16,6 +16,7 @@ import Register from "./components/register";
 import Login from "./components/login";
 import PrivateRoute from "./utils/authRouter";
 import PostedList from "./components/posted-list";
+import EditList from "./components/edit-list";
 function App() {
   return (
     <div className="App">
@@ -33,6 +34,7 @@ function App() {
         <Route path="/animals" component={Animals} />
         <Route path="/create" component={Create} />
         <Route path="/posted-list" component={PostedList} />
+        <Route path="/edit-list" component={EditList} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
       </Switch>

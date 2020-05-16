@@ -16,7 +16,7 @@ import ShareIcon from "@material-ui/icons/Share";
 import EditIcon from "@material-ui/icons/Edit";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import logo from "../icons/architecture-and-city.svg";
-
+import { NavLink } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
@@ -85,8 +85,10 @@ export default function CardView({ item }) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <EditIcon />
+        <IconButton>
+          <NavLink className="icon-edit" to={"/edit-list/${props.item.id}"}>
+            <EditIcon type="edit" key="edit" />
+          </NavLink>
         </IconButton>
 
         <IconButton
