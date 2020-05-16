@@ -47,10 +47,21 @@ const Create = ({
   const [selectedCategory, setCategory] = useState("Movies");
 
   const CategoryMapping = {
-    Movies: ["Action", "Drama", "Horror"],
-    Music: ["80's - 90's", "2000's", "2010's"],
-    TV: ["Comedy", "Drama"],
-    Games: ["2000's"],
+    Movies: [
+      "Action",
+      "Drama",
+      "Horror",
+      "Romance",
+      "Sci-Fi",
+      "Animation",
+      "Thriller",
+    ],
+    Music: ["Alternative", "Rap", "Metal", "Pop", "Classic Rock"],
+    TV: ["Comedy", "Drama", "Cartoon"],
+    Games: ["90's", "2000's", "2010's"],
+    Animals: ["Land", "Sea", "Air"],
+    Holidays: ["Holidays"],
+    Consoles: ["SEGA", "Nintendo", "Playstation"],
   };
 
   const handleChanges = (e) => {
@@ -64,11 +75,6 @@ const Create = ({
     }
     setListItem({ ...listItem, [e.target.name]: e.target.value });
   };
-
-  // Movies - Action, Drama, Horror
-  // Music - 80s - 90s, 2000s, 2010s
-  // TV - Comedy Drama
-  // Games - 2000s
 
   const handleSubmit = (e) => {
     e.preventDefault();
