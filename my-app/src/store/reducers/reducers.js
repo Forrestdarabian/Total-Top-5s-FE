@@ -166,25 +166,7 @@ export const reducer = (state = initialState, action) => {
         fetchingData: false,
         error: true,
       };
-    // Borrowing Item
-    case BORROW_START:
-      return {
-        ...state,
-        addItem: true,
-      };
-    case BORROW_ITEM_SUCCESS:
-      return {
-        ...state,
-        addItem: false,
-        error: "",
-        borrowData: [...state.borrowData, action.payload],
-      };
-    case BORROW_ERROR:
-      return {
-        ...state,
-        addItem: false,
-        error: action.payload,
-      };
+
     default:
       return state;
   }
