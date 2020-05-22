@@ -100,10 +100,10 @@ const Register = (props) => {
       <br />
       <br />
       <br />
-      <footer class="footer pt-80 pt-xs-60">
-        <div class="footer-container">
+      <footer className="footer pt-80 pt-xs-60">
+        <div className="footer-container">
           <h1>Total Top 5's</h1>
-          <div class="copyright">
+          <div className="copyright">
             <p>
               © 2020
               <a>
@@ -125,18 +125,18 @@ const Register = (props) => {
               www.flaticon.com
             </a>
           </div>
-          <div class="left">
-            <h4 class="something">Contact / Links</h4>
+          <div className="left">
+            <h4 className="something">Contact / Links</h4>
             <li>
               {" "}
               <a href="mailto:forrestdarabian@gmail.com">
-                <i class="ion-ios-email fa-icons"></i>
+                <i className="ion-ios-email fa-icons"></i>
                 Contact Me
               </a>{" "}
             </li>
             <li>
               <a href="https://www.forrestdarabian.com/">
-                <i class="fa-angle-double-right"></i>Developers Site
+                <i className="fa-angle-double-right"></i>Developers Site
               </a>
             </li>
           </div>

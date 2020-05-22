@@ -81,7 +81,6 @@ const Create = ({
     console.log(listItem);
     addLists(listItem);
     history.push(`/posted-list`);
-    // document.getElementById("clear-input").reset();
   };
 
   return (
@@ -124,13 +123,6 @@ const Create = ({
               {CategoryMapping[selectedCategory].map((item) => {
                 return <option value={item}> {item}</option>;
               })}
-
-              {/* <option value="Music">1980's - 1990's</option>
-              <option value="Music">2000's</option>
-              <option value="Music">2010's</option>
-              <option value="T.V. Shows">Drama</option>
-              <option value="T.V. Shows">Comedy</option>
-              <option value="Video Games">2000's</option> */}
             </select>
           </div>
           <br />
@@ -307,10 +299,10 @@ const Create = ({
         <br />
         <br />
       </div>
-      <footer class="footer pt-80 pt-xs-60">
-        <div class="footer-container">
+      <footer className="footer pt-80 pt-xs-60">
+        <div className="footer-container">
           <h1>Total Top 5's</h1>
-          <div class="copyright">
+          <div className="copyright">
             <p>
               © 2020
               <a>
@@ -332,18 +324,18 @@ const Create = ({
               www.flaticon.com
             </a>
           </div>
-          <div class="left">
-            <h4 class="something">Contact / Links</h4>
+          <div className="left">
+            <h4 className="something">Contact / Links</h4>
             <li>
               {" "}
               <a href="mailto:forrestdarabian@gmail.com">
-                <i class="ion-ios-email fa-icons"></i>
+                <i className="ion-ios-email fa-icons"></i>
                 Contact Me
               </a>{" "}
             </li>
             <li>
               <a href="https://www.forrestdarabian.com/">
-                <i class="fa-angle-double-right"></i>Developers Site
+                <i className="fa-angle-double-right"></i>Developers Site
               </a>
             </li>
           </div>

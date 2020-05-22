@@ -20,7 +20,6 @@ import EditList from "./components/edit-list";
 function App() {
   return (
     <div className="App">
-      {/* <Post /> */}
       <Switch>
         <Route exact path="/" component={Startup} />
         <Route path="/home" component={Home} />

@@ -163,22 +163,3 @@ export const deleteList = (id) => (dispatch) => {
       dispatch({ type: DELETE_LIST_FAILURE, payload: err });
     });
 };
-
-// Borrowing Action
-export const BORROW_START = "BORROW_START";
-export const BORROW_ITEM_SUCCESS = "BORROW_ITEM_SUCCESS";
-export const BORROW_ERROR = "BORROW_ERROR";
-
-export const borrowItem = (borrowItem) => (dispatch) => {
-  dispatch({ type: BORROW_START });
-  axiosWithAuth()
-    .get(`/api/items`, borrowItem)
-    .then((res) => {
-      console.log(res);
-      dispatch({ type: BORROW_ITEM_SUCCESS, payload: borrowItem });
-    })
-    .catch((err) => {
-      console.log(err);
-      dispatch({ type: BORROW_ERROR, payload: err });
-    });
-};
