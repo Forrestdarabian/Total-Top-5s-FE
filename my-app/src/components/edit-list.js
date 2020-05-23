@@ -65,7 +65,6 @@ const EditList = (props) => {
   const saveEdit = (e) => {
     e.preventDefault();
 
-    // const id = props.itemData.id;
     props.updateList(editing, cardData.id);
     props.history.push(`/posted-list`);
   };

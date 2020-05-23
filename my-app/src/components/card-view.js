@@ -100,7 +100,6 @@ export default function CardView({ item, handleDelete, history }) {
         <IconButton
           className={classes.expand}
           onClick={() => handleDelete(item.id)}
-          // aria-expanded={expanded}
           aria-label="show more"
         >
           <DeleteIcon />

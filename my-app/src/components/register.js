@@ -27,12 +27,10 @@ const Register = (props) => {
       .then((res) => {
         console.log(res.data);
         props.history.push(`/login/`);
-        // dispatch({ type: REGISTRATION_SUCCESS, payload: res.data });
         return true;
       })
       .catch((err) => {
         console.log(err);
-        // dispatch({ type: REGISTRATION_FAILURE, payload: err.response });
         alert(err.response.data.message);
         return err;
       });
