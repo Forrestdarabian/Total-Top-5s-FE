@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { logOut, addLists } from "../store/actions/actions";
 import logo from "../icons/hammer.svg";
 import "../App.css";
+let userName = localStorage.getItem("username");
 
 const Create = ({
   touched,
@@ -24,6 +25,7 @@ const Create = ({
   descriptionTwo,
   name,
   description,
+  username,
 }) => {
   if (!token) {
     history.push(`/login/`);
@@ -42,6 +44,7 @@ const Create = ({
     descriptionTwo: "",
     name: "",
     description: "",
+    username: `${userName}`,
   });
 
   const [selectedCategory, setCategory] = useState("Movies");
@@ -271,6 +274,21 @@ const Create = ({
               maxLength={200}
               placeholder="Description"
               value={description}
+              onChange={(e) => handleChanges(e)}
+              required
+            />
+          </div>
+          <br />
+          <div className="form-group">
+            <label>Your Name: </label>
+            <input
+              className="form-control"
+              id="username"
+              type="text"
+              name="username"
+              maxLength={200}
+              placeholder="Enter your name"
+              value={username}
               onChange={(e) => handleChanges(e)}
               required
             />

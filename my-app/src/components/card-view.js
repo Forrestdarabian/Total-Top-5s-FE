@@ -52,7 +52,7 @@ export default function CardView({ item, handleDelete, history }) {
   return (
     <Card className={classes.root} style={{ margin: "20px", width: "300px" }}>
       <CardHeader title={item.category} subheader={item.subcategory} />
-      Created by: {userName}
+      Created by: {item.username}
       <br /> <br />
       <CardMedia className={classes.media} image={logo} title={item.name} />
       <CardContent>
