@@ -8,6 +8,8 @@ import "../App.css";
 
 function Home(props) {
   const { touched, errors, logInUser, history, token } = props;
+
+  let userName = localStorage.getItem("username");
   return (
     <div className="home-container">
       <header className="Home-header">
@@ -48,9 +50,9 @@ function Home(props) {
       <div className="Home">
         <br />
         <div className="text-section">
-          <h1>Welcome to the Home Page!</h1>
+          <h1>Welcome to the Home Page{userName ? `, ${userName}` : ""}!</h1>
           <h3>
-            &uarr; Click a Category Above To See Examples of Some Top 5's!
+            &uarr; Click a Category above to see examples of some Top 5's!
           </h3>
           {token ? (
             <div>
@@ -98,10 +100,10 @@ function Home(props) {
         <div className="text-section">
           <h1>So What's This App All About?</h1>
           <p className="about">
-            Have You Ever Wanted a Place Where You Can Make Your Own Top 5
-            Lists? Well, We've Got You Covered! With New Categories Coming out
-            Weekly, You Can Constantly Upload, Edit, and Delete Your Top 5 Picks
-            for Any Category!
+            Have you ever wanted a place where you could make your own Top 5
+            Lists? Well, we've got you covered! With new Categories coming out
+            weekly, you'll be able to constantly Upload, Edit, and Delete your
+            Top 5 picks for any Category!
           </p>
         </div>
         <br />{" "}

@@ -40,17 +40,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CardView({ item }) {
+export default function CardView({ item, handleDelete, history }) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
+  let userName = localStorage.getItem("username");
 
   return (
     <Card className={classes.root} style={{ margin: "20px", width: "300px" }}>
       <CardHeader title={item.category} subheader={item.subcategory} />
+      Created by: {userName}
+      <br /> <br />
       <CardMedia className={classes.media} image={logo} title={item.name} />
       <CardContent>
         <Typography variant="body1" color="textPrimary" component="h1">
@@ -86,14 +89,17 @@ export default function CardView({ item }) {
       </CardContent>
       <CardActions disableSpacing>
         <IconButton>
-          <NavLink className="icon-edit" to={"/edit-list/${props.item.id}"}>
+          <a
+            className="icon-edit"
+            onClick={() => history.push("edit-list", { carddata: item })}
+          >
             <EditIcon type="edit" key="edit" />
-          </NavLink>
+          </a>
         </IconButton>
 
         <IconButton
           className={classes.expand}
-          // onClick={handleExpandClick}
+          onClick={() => handleDelete(item.id)}
           // aria-expanded={expanded}
           aria-label="show more"
         >

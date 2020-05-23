@@ -47,7 +47,7 @@ function Games() {
             <div className="text-section">
               <h1>Video Game Top 5's!</h1>
               <h3>
-                Interested in Making Your Own Top 5's? Click{" "}
+                Interested in making your own Top 5's? Click{" "}
                 <a href="./create">Here!</a>
               </h3>
             </div>

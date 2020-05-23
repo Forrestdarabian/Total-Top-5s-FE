@@ -14,9 +14,11 @@ const UserLogin = ({ touched, errors, logInUser, history, token }) => {
     password: "",
   });
 
-  // useEffect(() => {
-
-  // }, [history, token]);
+  useEffect(() => {
+    if (token) {
+      history.push("/create");
+    }
+  }, [token]);
 
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
@@ -27,9 +29,6 @@ const UserLogin = ({ touched, errors, logInUser, history, token }) => {
     if (user.username && user.password) {
       logInUser(user);
       // setUser({ username: "", password: "" });
-      if (token) {
-        history.push("/create");
-      }
     }
   };
 
