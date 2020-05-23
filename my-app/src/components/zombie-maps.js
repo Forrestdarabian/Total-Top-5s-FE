@@ -47,7 +47,7 @@ function Zombies() {
             <div className="text-section">
               <h1>COD Zombies Maps Top 5's!</h1>
               <h3>
-                Interested in Making Your Own Top 5's? Click{" "}
+                Interested in making your own Top 5's? Click{" "}
                 <a href="./create">Here!</a>
               </h3>
             </div>

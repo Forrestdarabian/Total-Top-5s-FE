@@ -5,7 +5,7 @@ import logo from "../icons/moon.svg";
 import "../App.css";
 import Card from "./card-view";
 
-import { logOut, fetchList } from "../store/actions/actions";
+import { logOut, fetchList, deleteList } from "../store/actions/actions";
 
 // const { Meta } = div;
 
@@ -19,9 +19,11 @@ const PostedList = (props) => {
     props.fetchList();
   }, []);
 
-  const handleDelete = (e) => {
-    e.preventDefault();
-    const id = props.item.id;
+  const handleDelete = (id) => {
+    //e.preventDefault();
+    console.log("deleted" + id);
+    //const id = props.item.id;
+
     props.deleteList(id);
   };
 
@@ -44,28 +46,27 @@ const PostedList = (props) => {
           <div className="text-section">
             <h1>Users Posts</h1>
             <h3>
-              Below Are User Submitted Posts. If you Recently Made A Post <br />{" "}
-              You Will Find It At The Bottom
+              Below are user submitted posts. If you recently made a post <br />{" "}
+              you will find it at the bottom.
             </h3>
           </div>
-        </div>{" "}
+        </div>
         <br />
-        <div
-          actions={[
-            <button
-              className="icon-delete"
-              type="delete"
-              key="delete"
-              onClick={handleDelete}
-            />,
-            <NavLink
-              className="icon-edit"
-              // to={`/dashboard/edit-items/${props.item.id}`}
-            >
-              <button type="edit" key="edit" />
-            </NavLink>,
-          ]}
-        >
+        <div>
+          {/* <button
+            className="icon-delete"
+            type="delete"
+            key="delete"
+            onClick={(e) => handleDelete(e)}
+          />
+          <NavLink
+            className="icon-edit"
+            to={`/dashboard/edit-items/`}
+            // ${props.item.id}
+          >
+            <button type="edit" key="edit" />
+          </NavLink> */}
+
           <div
             style={{
               display: "flex",
@@ -81,7 +82,13 @@ const PostedList = (props) => {
                 : "not working"}
             </p> */}
             {props.itemData.map((item) => {
-              return <Card item={item} />;
+              return (
+                <Card
+                  item={item}
+                  handleDelete={handleDelete}
+                  history={history}
+                />
+              );
             })}
           </div>
           {/* <div
@@ -158,4 +165,4 @@ const mapStateToProps = (state) => {
     token: state.token,
   };
 };
-export default connect(mapStateToProps, { fetchList })(PostedList);
+export default connect(mapStateToProps, { fetchList, deleteList })(PostedList);

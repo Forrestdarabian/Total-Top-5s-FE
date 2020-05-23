@@ -6,37 +6,67 @@ import { NavLink } from "react-router-dom";
 import logo from "../icons/hammer.svg";
 
 const EditList = (props) => {
-  console.log(props);
+  let cardData = props.location.state ? props.location.state.carddata : null;
+
+  if (!cardData) {
+    props.history.push("posted-list");
+  }
 
   let initialState = {
-    category: "",
-    subcategory: "",
-    nameFive: "",
-    descriptionFive: "",
-    nameFour: "",
-    descriptionFour: "",
-    nameThree: "",
-    descriptionThree: "",
-    nameTwo: "",
-    descriptionTwo: "",
-    name: "",
-    description: "",
+    category: cardData.category,
+    subcategory: cardData.subcategory,
+    nameFive: cardData.nameFive,
+    descriptionFive: cardData.descriptionFive,
+    nameFour: cardData.nameFour,
+    descriptionFour: cardData.descriptionFour,
+    nameThree: cardData.nameThree,
+    descriptionThree: cardData.descriptionThree,
+    nameTwo: cardData.nameTwo,
+    descriptionTwo: cardData.descriptionTwo,
+    name: cardData.name,
+    description: cardData.description,
   };
 
+  const CategoryMapping = {
+    Movies: [
+      "Action",
+      "Drama",
+      "Horror",
+      "Romance",
+      "Sci-Fi",
+      "Animation",
+      "Thriller",
+    ],
+    Music: ["Alternative", "Rap", "Metal", "Pop", "Classic Rock"],
+    TV: ["Comedy", "Drama", "Cartoon"],
+    Games: ["90's", "2000's", "2010's"],
+    Animals: ["Land", "Sea", "Air"],
+    Holidays: ["Holidays"],
+    Consoles: ["SEGA", "Nintendo", "Playstation"],
+  };
+
+  const [selectedCategory, setCategory] = useState(cardData.category);
   const [editing, setEditing] = useState(initialState);
   console.log(editing);
 
   const handleChanges = (e) => {
+    if (e.currentTarget.id == "category") {
+      setCategory(e.target.value);
+      let currentlistItem = editing;
+      editing.category = e.target.value;
+      editing.subcategory = CategoryMapping[e.target.value][0];
+
+      setEditing();
+    }
     setEditing({ ...editing, [e.target.name]: e.target.value });
   };
 
   const saveEdit = (e) => {
     e.preventDefault();
-    const id = props.match.params.id;
+
     // const id = props.itemData.id;
-    props.updateList(editing, id);
+    props.updateList(editing, cardData.id);
     props.history.push(`/posted-list`);
-    console.log(id);
   };
 
   return (
@@ -61,9 +91,9 @@ const EditList = (props) => {
               onChange={handleChanges}
               required
             >
-              {/* {Object.keys(CategoryMapping).map((item) => {
+              {Object.keys(CategoryMapping).map((item) => {
                 return <option value={item}> {item}</option>;
-              })} */}
+              })}
             </select>
           </div>
           <br />
@@ -79,16 +109,9 @@ const EditList = (props) => {
               onChange={handleChanges}
               required
             >
-              {/* {CategoryMapping[selectedCategory].map((item) => {
+              {CategoryMapping[selectedCategory].map((item) => {
                 return <option value={item}> {item}</option>;
-              })} */}
-
-              {/* <option value="Music">1980's - 1990's</option>
-                <option value="Music">2000's</option>
-                <option value="Music">2010's</option>
-                <option value="T.V. Shows">Drama</option>
-                <option value="T.V. Shows">Comedy</option>
-                <option value="Video Games">2000's</option> */}
+              })}
             </select>
           </div>
           <br />
@@ -243,7 +266,6 @@ const EditList = (props) => {
           </div>
           <br />
           <button type="primary" onClick={(e) => saveEdit(e)} className="home">
-            {" "}
             Update List
           </button>
           <br />

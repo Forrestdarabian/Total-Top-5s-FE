@@ -89,7 +89,7 @@ const Create = ({
       <div className="Home">
         <form id="clear-input" onSubmit={(e) => handleSubmit(e)}>
           <h1>Create a Top 5 List</h1>
-          <h3>Users Will Be Able To See Your Top 5's</h3>
+          <h3>Users will be able to see your Top 5's</h3>
           <div className="form-group">
             <label>Pick a Category: </label>
             <select

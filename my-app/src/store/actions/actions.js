@@ -40,6 +40,7 @@ export const logInUser = (user) => (dispatch) => {
     .post(`api/users/login`, user)
     .then((res) => {
       console.log(res);
+      localStorage.setItem("username", user.username);
       dispatch({
         type: LOGIN_SUCCESS,
         payload: res.data.token,
@@ -58,6 +59,8 @@ export const logInUser = (user) => (dispatch) => {
 export const LOG_OUT = "LOG_OUT";
 
 export const logOut = () => (dispatch) => {
+  localStorage.removeItem("username");
+
   dispatch({ type: LOG_OUT });
 };
 
