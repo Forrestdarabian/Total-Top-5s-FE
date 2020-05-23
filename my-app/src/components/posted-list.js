@@ -20,9 +20,7 @@ const PostedList = (props) => {
   }, []);
 
   const handleDelete = (id) => {
-    //e.preventDefault();
     console.log("deleted" + id);
-    //const id = props.item.id;
 
     props.deleteList(id);
   };
@@ -53,20 +51,6 @@ const PostedList = (props) => {
         </div>
         <br />
         <div>
-          {/* <button
-            className="icon-delete"
-            type="delete"
-            key="delete"
-            onClick={(e) => handleDelete(e)}
-          />
-          <NavLink
-            className="icon-edit"
-            to={`/dashboard/edit-items/`}
-            // ${props.item.id}
-          >
-            <button type="edit" key="edit" />
-          </NavLink> */}
-
           <div
             style={{
               display: "flex",
@@ -76,11 +60,6 @@ const PostedList = (props) => {
               width: "100%",
             }}
           >
-            {/* <p>
-              {props.itemData.length > 0
-                ? props.itemData[0].description
-                : "not working"}
-            </p> */}
             {props.itemData.map((item) => {
               return (
                 <Card

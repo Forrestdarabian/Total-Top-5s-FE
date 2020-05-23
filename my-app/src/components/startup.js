@@ -33,7 +33,7 @@ function Startup() {
             </p>
           </div>
           <div>
-            Icons made by
+            Icons made by{" "}
             <a
               href="https://www.flaticon.com/authors/smalllikeart"
               title="smalllikeart"

@@ -28,7 +28,6 @@ const UserLogin = ({ touched, errors, logInUser, history, token }) => {
     e.preventDefault();
     if (user.username && user.password) {
       logInUser(user);
-      // setUser({ username: "", password: "" });
     }
   };
 
