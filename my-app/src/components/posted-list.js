@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 import logo from "../icons/moon.svg";
+import loading from "../icons/giphy.gif";
+
 import "../App.css";
 import Card from "./card-view";
 
 import { logOut, fetchList, deleteList } from "../store/actions/actions";
-
-// const { Meta } = div;
 
 const PostedList = (props) => {
   const { touched, errors, logInUser, history, token } = props;
@@ -98,6 +98,8 @@ const PostedList = (props) => {
             description={props.itemData.description}
           /> */}
         </div>
+        <img src={loading} width="50px" id="hideMe" alt="loading" />
+
         <br />
         <br />
         <br />

@@ -25,6 +25,7 @@ const EditList = (props) => {
     descriptionTwo: cardData.descriptionTwo,
     name: cardData.name,
     description: cardData.description,
+    username: cardData.username,
   };
 
   const CategoryMapping = {
@@ -260,6 +261,21 @@ const EditList = (props) => {
               maxLength={200}
               placeholder="Description"
               value={editing.description}
+              onChange={(e) => handleChanges(e)}
+              required
+            />
+          </div>
+          <br />
+          <div className="form-group">
+            <label>Your Name: </label>
+            <input
+              className="form-control"
+              id="username"
+              type="text"
+              name="username"
+              maxLength={200}
+              placeholder="Enter your name"
+              value={editing.username}
               onChange={(e) => handleChanges(e)}
               required
             />
