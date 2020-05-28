@@ -17,6 +17,7 @@ import EditIcon from "@material-ui/icons/Edit";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import logo from "../icons/architecture-and-city.svg";
 import { NavLink } from "react-router-dom";
+import "../App.css";
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
@@ -50,8 +51,12 @@ export default function CardView({ item, handleDelete, history }) {
   let userName = localStorage.getItem("username");
 
   return (
-    <Card className={classes.root} style={{ margin: "20px", width: "300px" }}>
-      <CardHeader title={item.category} subheader={item.subcategory} />
+    <Card
+      id="mui"
+      className={classes.root}
+      style={{ margin: "20px", width: "300px" }}
+    >
+      <CardHeader id="mui" title={item.category} subheader={item.subcategory} />
       Created by: {item.username}
       <br /> <br />
       <CardMedia className={classes.media} image={logo} title={item.name} />

@@ -24,7 +24,7 @@
 
 /* Style the accordion content title */
 .accordion__title {
-  font-family: "Roboto", normal;
+  font-family: "Unkempt", cursive;
   font-weight: 10;
   font-size: 14px;
   text-align: center;
@@ -50,7 +50,7 @@
 
 /* Style the accordion content text */
 .accordion__text {
-  font-family: "Roboto", normal;
+  font-family: "Unkempt", cursive;
   font-weight: 400;
   font-size: 14px;
   padding: 18px;

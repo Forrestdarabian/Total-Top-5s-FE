@@ -153,6 +153,38 @@ h1.top-h1 {
   margin-top: 0px;
 }
 
+div.MuiCardContent-root h1 {
+  font-family: "Unkempt", cursive;
+}
+
+div.MuiCardContent-root p {
+  font-family: "Unkempt", cursive;
+}
+
+span.MuiCardHeader-content {
+  font-family: "Unkempt", cursive;
+}
+
+#mui span {
+  font-family: "Unkempt", cursive;
+}
+
+form {
+  font-family: "Unkempt", cursive;
+}
+
+input {
+  font-family: "Unkempt", cursive;
+}
+
+option {
+  font-family: "Unkempt", cursive;
+}
+
+select {
+  font-family: "Unkempt", cursive;
+}
+
 .nav-container {
   background: linear-gradient(rgb(230, 11, 175), yellow);
   margin-left: 300px;
