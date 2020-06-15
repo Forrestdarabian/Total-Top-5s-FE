@@ -30,8 +30,8 @@ function Holidays() {
         <NavLink to="/holidays">
           <button className="games">Holidays</button>
         </NavLink>
-        <NavLink to="/foods">
-          <button className="Foods">Foods</button>
+        <NavLink to="/zombies-maps">
+          <button className="zombies">Zombies Maps</button>
         </NavLink>
       </div>
       <br />
@@ -56,11 +56,8 @@ function Holidays() {
           <br />
           <br />
           <br />
-          <br />
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        <br />
-        <br />
         <br />
         <br />
         <br />
@@ -69,15 +66,10 @@ function Holidays() {
           title="Holidays"
           content="
           <h3>5. Valentines Day</h3>
-          <p>Love is in the air!<p>
           <h3>4. Thanksgiving</h3>
-          <p>Being around family makes this a great holiday for me.<p>
           <h3>3. Easter</h3>
-          <p>I think I only like this holiday because of it's color scheme...<p>
           <h3>2. Christmas</h3>
-          <p>Giving is always better than recieving!<p>
           <h3>1. Halloween</h3>
-          <p>The one day a year you can be someone you're not. How fun?<p>
           "
         />
       </div>

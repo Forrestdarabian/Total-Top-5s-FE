@@ -30,8 +30,8 @@ function Games() {
         <NavLink to="/holidays">
           <button className="games">Holidays</button>
         </NavLink>
-        <NavLink to="/foods">
-          <button className="Foods">Foods</button>
+        <NavLink to="/zombies-maps">
+          <button className="zombies">Zombies Maps</button>
         </NavLink>
       </div>
       <br />
@@ -56,18 +56,15 @@ function Games() {
           <br />
           <br />
           <br />
-          <br />
           <img src={logo} className="App-logo" alt="logo" />
         </header>
         <br />
         <br />
         <br />
-        <br />
-        <br />
-        <h1>Choose a Video Game Genre Below!</h1>
+        <h1>Choose a Video Game Decade Below!</h1>
 
         <Accordion
-          title="Video Games"
+          title="2000's"
           content="
           <h3>5. Dead By Daylight</h3>
           <p>Recommended DLC's: The Halloween Chapter, The Saw Chapter</p>

@@ -40,11 +40,10 @@ const EditList = (props) => {
     ],
     Music: ["Alternative", "Rap", "Metal", "Pop", "Classic Rock"],
     TV: ["Comedy", "Drama", "Cartoon"],
-    Games: ["Video Games"],
+    Games: ["90's", "2000's", "2010's"],
     Animals: ["Land", "Sea", "Air"],
     Holidays: ["Holidays"],
     Consoles: ["SEGA", "Nintendo", "Playstation"],
-    Food: ["Food"],
   };
 
   const [selectedCategory, setCategory] = useState(cardData.category);
@@ -293,13 +292,12 @@ const EditList = (props) => {
             <button className="home">Home</button>
           </NavLink>
         </div>
-        <br />
+
         <br />
         <br />
         <br />
         <br />
         <img src={logo} className="App-logo" alt="logo" />
-        <br />
         <br />
         <br />
         <br />

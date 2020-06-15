@@ -99,12 +99,7 @@ const Register = (props) => {
       </div>
       <br />
       <br />
-      <br />
-      <br />
-      <br />
       <img src={logo} className="App-logo" alt="logo" />
-      <br />
-      <br />
       <br />
       <br />
       <br />

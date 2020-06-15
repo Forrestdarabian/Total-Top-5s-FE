@@ -9,7 +9,7 @@ import Tv from "./components/tv";
 import Games from "./components/games";
 import Holidays from "./components/holidays";
 import Consoles from "./components/game-consoles";
-import Foods from "./components/foods";
+import Zombies from "./components/zombie-maps";
 import Animals from "./components/animals";
 import Create from "./components/create-list";
 import Register from "./components/register";
@@ -28,7 +28,7 @@ function App() {
         <Route path="/tv" component={Tv} />
         <Route path="/games" component={Games} />
         <Route path="/holidays" component={Holidays} />
-        <Route path="/Foods" component={Foods} />
+        <Route path="/zombies-maps" component={Zombies} />
         <Route path="/game-consoles" component={Consoles} />
         <Route path="/animals" component={Animals} />
         <Route path="/create" component={Create} />
