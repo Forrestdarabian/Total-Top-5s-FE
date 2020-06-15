@@ -1,10 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Accordion from "../functionality/accordion";
-import logo from "../icons/skull.svg";
+import logo from "../icons/burger.svg";
 import "../App.css";
 
-function Zombies() {
+function Foods() {
   return (
     <div className="home-container">
       <h1 className="top-h1">Total Top 5's</h1>
@@ -30,8 +30,8 @@ function Zombies() {
         <NavLink to="/holidays">
           <button className="games">Holidays</button>
         </NavLink>
-        <NavLink to="/zombies-maps">
-          <button className="zombies">Zombies Maps</button>
+        <NavLink to="/foods">
+          <button className="Foods">Foods</button>
         </NavLink>
       </div>
       <br />
@@ -45,7 +45,7 @@ function Zombies() {
           <div>
             <br />
             <div className="text-section">
-              <h1>COD Zombies Maps Top 5's!</h1>
+              <h1>Food Top 5's!</h1>
               <h3>
                 Interested in making your own Top 5's? Click{" "}
                 <a href="./create">Here!</a>
@@ -55,65 +55,31 @@ function Zombies() {
           <br />
           <br />
           <br />
+          <br />
+          <br />
           <img src={logo} className="App-logo" alt="logo" />
         </header>
         <br />
         <br />
         <br />
-        <h1>Choose a Game Below!</h1>
+        <br />
+        <br />
+        <h1>Choose a type of Food Below!</h1>
         <Accordion
-          title="World At War"
+          title="Foods"
           content="
-          <h3>5. N/A</h3>
-          <p></p>
-          <h3>4. Shi No Numa</h3>
-          <p>Pros: Introduced the PPSH, Dog Rounds, and Wunderwaffe DG-2, Great Atmosphere</p>
-          <p>Cons: No Pack-A-Punch, Map Layout is Very Basic</p>
-          <h3>3. Veruckt</h3>
-          <p>Pros: One of the Scariest Maps, Introduced Perk Machines and Traps</p>
-          <p>Cons: Map Layout is Tedious, No Pack-A-Punch or Dog Rounds</p>
-          <h3>2. Nacht Der Untoten</h3>
-          <p>Pros: Most Classic Zombies Experience, Paved the Road For Every Amazing Map Ahead</p>
-          <p>Cons: Only 3 Rooms, Gets Boring After Camping Forever</p>
-          <h3>1. Der Riese</h3>
-          <p>Pros: Very Innovative Map, Introduced Pack-A-Punch, Great Camping Spots</p>
+          <h3>Burgers</h3>
+          <p>Who doesn't love burgers?</p>
+          <h3>Ribs</h3>
+          <p>Only when I'm super hungry though...</p>
+          <h3>Tacos</h3>
+          <p>Preferably homemade...Just saying</p>
+          <h3>Sushi</h3>
+          <p>Not everyones favorite, but its definitely one of mine!</p>
+          <h3>Korean BBQ</h3>
+          <p>Expensive? Yes. Delicious? Yes.</p>
           "
         />
-        <Accordion
-          title="Black Ops 1"
-          content="
-          <h3>5. Moon</h3>
-          <p>Pros: Best Easter Egg, Fun Pack-A-Punch Location</p>
-          <p>Cons: Some Sections of the Map Are a Bit Hard to Get Through For New Players</p>
-          <h3>4. Five</h3>
-          <p>Pros: Memorable Cast, Pentagon Thief and Winters Howl are Great Additions</p>
-          <p>Cons: Very Compact Map, Hard to Traverse</p>
-          <h3>3. Shangri-La</h3>
-          <p>Pros: Most Visually-Stunning Map, Best Wonder Weapon (Baby Gun)</p>
-          <p>Cons: Map Layout is Very Tedious, Need Communication For Pack-A-Punch</p>
-          <h3>2. Ascension</h3>
-          <p>Pros: Very Well-Structured Map, Great Camping Spots</p>
-          <p>Cons: Monkey Rounds Can Be Hard With Lack Of Communication, Gets Boring After Camping Forever</p>
-          <h3>1. Call Of The Dead</h3>
-          <p>Pros: Very Nostalgic Experience, Best Easter-Egg Song, Keeps You On Your Feet</p>
-          "
-        />
-        {/* <Accordion
-          title="Black Ops 2"
-          content="
-          <h3>5. Halloween (2007)</h3>
-          <p>Pros: </p>
-          <p>Cons: </p>
-          "
-        />
-        <Accordion
-          title="Black Ops 3"
-          content="
-          <h3>5. Halloween (2007)</h3>
-          <p>Pros: </p>
-          <p>Cons: </p>
-          "
-        /> */}
       </div>
       <br />
       <br />
@@ -166,4 +132,4 @@ function Zombies() {
   );
 }
 
-export default Zombies;
+export default Foods;

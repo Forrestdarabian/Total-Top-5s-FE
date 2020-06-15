@@ -61,10 +61,11 @@ const Create = ({
     ],
     Music: ["Alternative", "Rap", "Metal", "Pop", "Classic Rock"],
     TV: ["Comedy", "Drama", "Cartoon"],
-    Games: ["90's", "2000's", "2010's"],
+    Games: ["Video Games"],
     Animals: ["Land", "Sea", "Air"],
     Holidays: ["Holidays"],
     Consoles: ["SEGA", "Nintendo", "Playstation"],
+    Food: ["Food"],
   };
 
   const handleChanges = (e) => {
@@ -306,12 +307,13 @@ const Create = ({
             <button className="home">Home</button>
           </NavLink>
         </div>
-
+        <br />
         <br />
         <br />
         <br />
         <br />
         <img src={logo} className="App-logo" alt="logo" />
+        <br />
         <br />
         <br />
         <br />

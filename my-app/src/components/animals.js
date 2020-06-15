@@ -30,8 +30,8 @@ function Animals() {
         <NavLink to="/holidays">
           <button className="games">Holidays</button>
         </NavLink>
-        <NavLink to="/zombies-maps">
-          <button className="zombies">Zombies Maps</button>
+        <NavLink to="/foods">
+          <button className="Foods">Foods</button>
         </NavLink>
       </div>
       <br />
@@ -55,8 +55,12 @@ function Animals() {
           <br />
           <br />
           <br />
+          <br />
+          <br />
           <img src={logo} className="App-logo" alt="logo" />
         </header>
+        <br />
+        <br />
         <br />
         <br />
         <br />
@@ -65,10 +69,15 @@ function Animals() {
           title="Sea"
           content="
           <h3>5. Killer Whales</h3>
+          <p>They're cool, thats all.<p>
           <h3>4. Dolphins</h3>
+          <p>Such intelligent gentle creatures!<p>
           <h3>3. Jellyfish</h3>
+          <p>Always wanted a pet jellyfish as a kid...<p>
           <h3>2. Octopus</h3>
+          <p>8 Tentacles? Awesome...Just awesome.<p>
           <h3>1. Sharks</h3>
+          <p>Gotta love sharks...<p>
 
           "
         />
@@ -76,10 +85,15 @@ function Animals() {
           title="Land"
           content="
           <h3>5. Cats</h3>
+          <p>Fun to pet and cuddle with.<p>
           <h3>4. Panthers</h3>
+          <p>NOT fun to pet or cuddle with.<p>
           <h3>3. Ostriches</h3>
+          <p>They look like dinosaur birds.<p>
           <h3>2. Dogs</h3>
+          <p>Loyal and loving.<p>
           <h3>1. Wolves</h3>
+          <p>Just an overall awesome animal.<p>
 
           "
         />
@@ -87,10 +101,15 @@ function Animals() {
           title="Air"
           content="
           <h3>5. Blue Jays</h3>
+          <p>Seeing them in my garden is always fun!<p>
           <h3>4. Mockingbirds</h3>
+          <p>I love their colors!<p>
           <h3>3. Hawks</h3>
+          <p>Not as cool as falcons...<p>
           <h3>2. Falcons</h3>
+          <p>Not as cool as vultures...<p>
           <h3>1. Vultures</h3>
+          <p>They eat dead things...Nice.<p>
           "
         />
       </div>
