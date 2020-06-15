@@ -36,8 +36,8 @@ function Home(props) {
           <NavLink to="/holidays">
             <button className="games">Holidays</button>
           </NavLink>
-          <NavLink to="/zombies-maps">
-            <button className="zombies">Zombies Maps</button>
+          <NavLink to="/foods">
+            <button className="Foods">Foods</button>
           </NavLink>
         </div>
         <br />
@@ -87,6 +87,7 @@ function Home(props) {
             </>
           )}
         </div>
+        <br />
         <br />
         <br />
         <br />

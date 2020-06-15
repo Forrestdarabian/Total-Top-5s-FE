@@ -23,6 +23,10 @@
   }
 }
 
+div.form-group {
+  font-size: larger;
+}
+
 /* @media (min-width: 1285px) {
   div.footer-container {
     margin-left: 0px;
@@ -151,6 +155,7 @@ h1.top-h1 {
   color: black(0, 0, 0);
   text-decoration: underline;
   margin-top: 0px;
+  padding-top: 10px;
 }
 
 div.MuiCardContent-root h1 {
@@ -195,6 +200,13 @@ select {
   .nav-container {
     margin-left: 10px;
     margin-right: 10px;
+    border-style: solid;
+  }
+}
+@media (min-width: 1900px) {
+  .nav-container {
+    margin-left: 0px;
+    margin-right: 0px;
     border-style: solid;
   }
 }
