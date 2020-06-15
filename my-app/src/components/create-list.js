@@ -307,12 +307,13 @@ const Create = ({
             <button className="home">Home</button>
           </NavLink>
         </div>
-
+        <br />
         <br />
         <br />
         <br />
         <br />
         <img src={logo} className="App-logo" alt="logo" />
+        <br />
         <br />
         <br />
         <br />
