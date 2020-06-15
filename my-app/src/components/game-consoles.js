@@ -30,8 +30,8 @@ function Consoles() {
         <NavLink to="/holidays">
           <button className="games">Holidays</button>
         </NavLink>
-        <NavLink to="/foods">
-          <button className="Foods">Foods</button>
+        <NavLink to="/zombies-maps">
+          <button className="zombies">Zombies Maps</button>
         </NavLink>
       </div>
       <br />
@@ -62,23 +62,15 @@ function Consoles() {
         <br />
         <br />
         <br />
-        <br />
-        <br />
         <h1>Choose a Brand Below!</h1>
         <Accordion
           title="Nintendo"
           content="
           <h3>5. Wii</h3>
-          <p>This console was revolutionary when it was first introduced.<p>
           <h3>4. SNES</h3>
-          <p>This console has so many classic games!<p>
           <h3>3. Switch</h3>
-          <p>Theres nothing like getting together with your friends for a fun game of Mariokart!<p>
           <h3>2. Gamecube</h3>
-          <p>My first console I've ever owned.<p>
           <h3>1. Nintendo 64</h3>
-          <p>Everyone knows these were the good ol' days!<p>
-
 
           "
         />
@@ -86,30 +78,20 @@ function Consoles() {
           title="Playstation"
           content="
           <h3>5. PSP</h3>
-          <p>Way ahead of it's time<p>
           <h3>4. Playstation 1</h3>
-          <p>Definitely outdated, but it introduced so many great platformers that are still relevant today!<p>
           <h3>3. PS3</h3>
-          <p>So many great games on this console!<p>
           <h3>2. PS4</h3>
-          <p>Those graphics though...<p>
           <h3>1. Playstation 2</h3>
-          <p>The best-selling console of all time!<p>
           "
         />
         <Accordion
           title="Sega"
           content="
           <h3>5. Game Gear</h3>
-          <p>You gotta have this one on the list...<p>
           <h3>4. Master System</h3>
-          <p>Good ol' classic Sega!<p>
           <h3>3. Saturn</h3>
-          <p>Definitely a slept on console.<p>
           <h3>2. Genesis</h3>
-          <p>90's all the way!<p>
           <h3>1. Dreamcast</h3>
-          <p>The aesthetics of this console are insane!<p>
           "
         />
       </div>

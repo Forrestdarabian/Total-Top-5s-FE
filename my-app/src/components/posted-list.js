@@ -78,13 +78,12 @@ const PostedList = (props) => {
           /> */}
         </div>
         <img src={loading} width="50px" id="hideMe" alt="loading" />
-        <br />
+
         <br />
         <br />
         <br />
         <br />
         <img src={logo} className="App-logo" alt="logo" />
-        <br />
         <br />
         <br />
         <br />
