@@ -34,46 +34,48 @@ const UserLogin = ({ touched, errors, logInUser, history, token }) => {
   return (
     <div className="sign-up-container">
       <h1 className="top-h1">Total Top 5's</h1>
-      <Form className="login-form" onChange={handleChange}>
-        <h1>Login</h1>
-        <h3>
-          Don't Have An Account? Click
-          <a href="/register"> Here</a> To Register!
-        </h3>
-        <Label for="username">Username: </Label>
-        <Field
-          className="form-control"
-          type="text"
-          name="username"
-          placeholder=" Enter your Username"
-          autoComplete="username"
-        ></Field>
-        {touched.username && errors.username && (
-          <p className="error">{errors.username}</p>
-        )}{" "}
-        <br /> <br />
-        <Label for="password">Password: </Label>
-        <Field
-          className="form-control"
-          type="password"
-          name="password"
-          placeholder=" Enter your Password"
-          autoComplete="current-password"
-        ></Field>
-        {touched.password && errors.password && (
-          <p className="error">{errors.password}</p>
-        )}
-        <br /> <br />
-        <Button
-          className="submit"
-          type="submit"
-          onClick={(e) => handleSubmit(e)}
-        >
-          Sign In
-        </Button>
-        <br />
-        <br />
-      </Form>
+      <div className="form-group">
+        <Form className="login-form" onChange={handleChange}>
+          <h1>Login</h1>
+          <h3>
+            Don't Have An Account? Click
+            <a href="/register"> Here</a> To Register!
+          </h3>
+          <Label for="username">Username: </Label>
+          <Field
+            className="form-control"
+            type="text"
+            name="username"
+            placeholder=" Enter your Username"
+            autoComplete="username"
+          ></Field>
+          {touched.username && errors.username && (
+            <p className="error">{errors.username}</p>
+          )}{" "}
+          <br /> <br />
+          <Label for="password">Password: </Label>
+          <Field
+            className="form-control"
+            type="password"
+            name="password"
+            placeholder=" Enter your Password"
+            autoComplete="current-password"
+          ></Field>
+          {touched.password && errors.password && (
+            <p className="error">{errors.password}</p>
+          )}
+          <br /> <br />
+          <Button
+            className="submit"
+            type="submit"
+            onClick={(e) => handleSubmit(e)}
+          >
+            Sign In
+          </Button>
+          <br />
+          <br />
+        </Form>
+      </div>
       <br />
       <div className="second-nav-container">
         <NavLink to="/home">
@@ -83,7 +85,10 @@ const UserLogin = ({ touched, errors, logInUser, history, token }) => {
       <br />
       <br />
       <br />
+      <br />
+      <br />
       <img src={logo} className="App-logo" alt="logo" />
+      <br />
       <br />
       <br />
       <br />
